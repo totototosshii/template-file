@@ -1,5 +1,5 @@
 .about-concept-bgimg {
-  background-image: url(../../images/texture_00010.png);
+  background-image: url(../../images/aboutconcept_bg.png);
   background-size:cover;
   .alternate-layout, .alternate-layout--reverse {
     display: flex;
@@ -164,7 +164,7 @@
 
 
 .hair-style {
-  background-image: url(../../images/p0127.png);
+  background-image: url(../../images/hair-style_bg.png);
   .inner {
     padding-top: 70px;
     .hair-style__heading {
@@ -297,7 +297,7 @@
 
 
 .menu {
-  background-image: url(../../images/1608388.jpg);
+  background-image: url(../../images/menu_bg.jpg);
   .menu-board {
     position: relative;
   }
@@ -375,7 +375,7 @@
 @include mq('pc') {
   .menu-board {
     height: 641px;
-    background-image: url(../../images/480595.jpg);
+    background-image: url(../../images/bg-board.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 100px 150px 60px 150px;
@@ -422,7 +422,7 @@
 @media (min-width: 1024px) and (max-width: 1199px) {
   .menu-board {
     height: vw(1200, 641);
-    background-image: url(../../images/480595.jpg);
+    background-image: url(../../images/bg-board.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: vw(1200, 100) vw(1200, 150) vw(1200, 60) vw(1200, 150);
@@ -470,7 +470,7 @@
     padding-top: 80px;
     .menu-board {
       height: 75vw;
-      background-image: url(../../images/480595.jpg);
+      background-image: url(../../images/bg-board.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       margin-left: 5px;
@@ -522,7 +522,7 @@
     .inner {
       padding: 0;
       .menu-board {
-        background-image: url(../../images/menu-bord_sp.jpg);
+        background-image: url(../../images/bg-board_sp.jpg);
         background-repeat: no-repeat;
         padding: 40px 0 28px 20px;
         width: 320px;

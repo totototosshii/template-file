@@ -153,7 +153,6 @@ button {
   max-width: 100%;
   width: 1200px;
   height: inherit;
-  overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -163,7 +162,7 @@ button {
 }
 
 .about-concept-bgimg {
-  background-image: url(../../images/texture_00010.png);
+  background-image: url(../../images/aboutconcept_bg.png);
   background-size: cover;
 }
 
@@ -338,7 +337,7 @@ button {
 }
 
 .hair-style {
-  background-image: url(../../images/p0127.png);
+  background-image: url(../../images/hair-style_bg.png);
 }
 
 .hair-style .inner {
@@ -485,7 +484,7 @@ button {
 }
 
 .menu {
-  background-image: url(../../images/1608388.jpg);
+  background-image: url(../../images/menu_bg.jpg);
 }
 
 .menu .menu-board {
@@ -573,7 +572,7 @@ button {
 @media (min-width: 1200px) {
   .menu-board {
     height: 641px;
-    background-image: url(../../images/480595.jpg);
+    background-image: url(../../images/bg-board.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 100px 150px 60px 150px;
@@ -620,7 +619,7 @@ button {
 @media (min-width: 1024px) and (max-width: 1199px) {
   .menu-board {
     height: 53.46122vw;
-    background-image: url(../../images/480595.jpg);
+    background-image: url(../../images/bg-board.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 8.34028vw 12.51043vw 5.00417vw 12.51043vw;
@@ -669,7 +668,7 @@ button {
   }
   .menu .menu-board {
     height: 75vw;
-    background-image: url(../../images/480595.jpg);
+    background-image: url(../../images/bg-board.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 5px;
@@ -722,7 +721,7 @@ button {
     padding: 0;
   }
   .menu .inner .menu-board {
-    background-image: url(../../images/menu-bord_sp.jpg);
+    background-image: url(../../images/bg-board_sp.jpg);
     background-repeat: no-repeat;
     padding: 40px 0 28px 20px;
     width: 320px;
@@ -1341,3 +1340,4 @@ button {
     font-size: 20px;
   }
 }
+/*# sourceMappingURL=style.css.map */
