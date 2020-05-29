@@ -3,7 +3,8 @@
 	padding: 0;
 	max-width: 100%;
 	width: $layout-width-inner;
-  height: inherit;
+	height: inherit;
+	overflow: hidden;
 	@include mq('sp') {
 		padding: 0 15px;
 	}

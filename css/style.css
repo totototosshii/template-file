@@ -153,6 +153,7 @@ button {
   max-width: 100%;
   width: 1200px;
   height: inherit;
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
