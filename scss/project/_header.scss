@@ -1,0 +1,202 @@
+// 共通スタイル
+.header {
+  background-color: #fff;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    .nav-list {
+      display: flex;
+      .nav-item {
+        position: relative;
+      }
+      .nav-item::before {
+        position: absolute;
+        content: "";
+        top: 25%;
+        height: 20px;
+        border-right: 1px solid $cr-txt;
+      }
+      .nav-item a {
+        padding: 0 20px;
+      }
+    }
+    .header-tel {
+      font-size: 48px;
+      font-weight: 400;
+      margin-right: 10px;
+    }
+  }
+}
+
+@include mq('pc') {
+  body {
+    margin-top: 120px;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 50;
+    padding-bottom: 20px;
+    .header-logo {
+      padding-top: 20px;
+    }
+    .nav-list {
+      justify-content: space-between;
+      .nav-item {
+        margin-top: 71px;
+        a {
+          font-size: 24px;
+        }
+      }
+      &::before {
+        display: block;
+      }
+    }
+    .burger-btn {
+      display: none;
+    }
+  }
+}
+
+@include mq('tab') {
+  body {
+    margin-top: vw(1200, 170);
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 50;
+    padding-bottom: vw(1200, 15);
+    .inner {
+      position: relative;
+      .header-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        padding-top: 20px;
+        transform: translateX(-50%);
+      }
+      .header-nav {
+        position: absolute;
+        width: 100%;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        .nav-list {
+          justify-content: center;
+        }
+        .nav-item {
+          margin-top: vw(1200, 71);
+        }
+      }
+      .header-tel {
+        position: absolute;
+        top: 0;
+        right: 1%;
+        font-size: vw(1200, 48);
+      }
+    }
+  }
+}
+
+@include mq('sp') {
+  body {
+    margin-top: 60px;
+  }
+  .header .inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    z-index: 50;
+    background-color: #fff;
+    .header-logo {
+      position: static;
+      padding-top: 10px;
+      width: vw(767, 285);
+    }
+    .header-nav {
+      display: none;
+    }
+    /*ハンバーガーメニュー横からスライド表示のクラス*/
+    .header-tel {
+      display: none;
+    }
+    /* ハンバーガーメニュー */
+    .burger-btn {
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 4vw;
+    }
+    .burger-btn .bar {
+      display: block;
+      height: 3px;
+      width: 30px;
+      background-color: $cr-txt;
+    }
+    .bar_top {
+      margin-bottom: 8px;
+    }
+    .bar_mid {
+      margin-bottom: 8px;
+    }
+  }
+  /* ハンバーガーメニューが開いたとき */
+  .burger-btn.cross .bar_top {
+    transform: rotate(45deg) translate(8px,8px);
+    transition: .3s;
+  }
+  .burger-btn.cross .bar_mid {
+    opacity: 0;
+    transition: .3s;
+  }
+  .burger-btn.cross .bar_bottom {
+    transform: rotate(-45deg) translate(8px,-8px);
+    transition: .3s;
+  }
+  body.noscroll {
+    overflow: hidden;
+  }
+}
+// ドロワーメニュー
+.drawer {
+  transform: translateX(100%);
+  transition: .3s;
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  z-index: 30;
+}
+.drawer.slide-in{
+  transform: translateX(0);
+  transition: .3s;
+  background-color: #5D310C;
+  .nav-list {
+    height: 65%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav-item {
+    color: #fff;
+    margin-top: 30px;
+    text-align: right;
+    padding-right: 45px;
+    a {
+      font-size: 20px;
+    }
+  }
+  .nav-item:last-of-type {
+    margin-bottom: 0;
+  }
+  .nav-item::before {
+    display: none;
+  }
+}
