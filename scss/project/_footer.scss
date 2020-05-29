@@ -1,0 +1,76 @@
+.footer {
+  background-image: url(../../images/footer-flooring.png);
+  color: #fff;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    .footer-logo {
+      margin-top: 50px;
+    }
+    .footer-nav {
+      .nav-list {
+        .nav-item a {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .copy {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+@include mq('pc') {
+  .footer .inner {
+    .footer-nav {
+      margin-right: 10px;
+      margin-top: 75px;
+      .nav-list {
+        display: flex;
+        .nav-item {
+          position: relative;
+          a {
+            padding: 0 20px;
+          }
+        }
+        .nav-item::before {
+          position: absolute;
+          content: "";
+          top: 25%;
+          height: 20px;
+          border-right: 1px solid #fff;
+        }
+      }
+    }
+  }
+}
+
+@include mq('tab') {
+  .footer .inner {
+    margin-bottom: vw(1200, 70);
+    justify-content: space-around;
+    .footer-nav {
+      margin-top: vw(1200, 75);
+    }
+  }
+}
+
+@include mq('sp') {
+  .footer .inner {
+    padding-top: 25px;
+    margin-bottom: 30px;
+    display: block;
+    .footer-logo {
+      margin-top: 25px;
+      width: 179px;
+    }
+    .footer-nav {
+      margin-top: 30px;
+    }
+    .nav-item {
+      font-size: 20px;
+    }
+  }
+}
