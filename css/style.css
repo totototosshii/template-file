@@ -1000,7 +1000,7 @@ button {
   .access .inner .access-right .access-right-content .access-scissorsimg {
     width: 150px;
     height: 100px;
-    margin: auto;
+    margin-top: 80px;
   }
   .access .inner .access-left {
     margin-top: 25vw;
