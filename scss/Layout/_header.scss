@@ -6,6 +6,9 @@
   top: 0;
   left: 0;
   z-index: 20;
+  @include mq('sp'){
+    height: 70px;
+  }
   &inner{
     width: 90%;
     @include mq('tab'){
@@ -167,6 +170,9 @@
   }
   @include mq('tab'){
     top: 4vw;
+  }
+  @include mq('sp'){
+    top: 5vw;
   }
 }
 

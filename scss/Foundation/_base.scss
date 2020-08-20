@@ -17,6 +17,10 @@ body{
   padding-top: 90px;
   min-height: 100vh;
   z-index: -100;
+  @include mq('sp'){
+    background-size: auto;
+    padding-top: 70px;
+  }
 }
 
 img{
