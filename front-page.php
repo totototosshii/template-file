@@ -1,79 +1,20 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <title>デイトラ卒業制作マハーバーラタ</title>
-  <meta name="description" content="">
-  <meta property="og:title" content="">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:site_name" content="">
-  <meta property="og:description" content="">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- adobe-font -->
-  <link rel="stylesheet" href="https://use.typekit.net/bff7isf.css">
-  <link rel="stylesheet" href="css/style.css?ver=1.0.0">
-  <!-- fontawesome -->
-  <script src="https://kit.fontawesome.com/cba31e06f6.js" crossorigin="anonymous"></script>
-</head>
-<body class="top-page">
-  <header class="header">
-    <div class="header-inner">
-
-      <nav class="header-nav">
-        <ul class="header-list">
-          <li>
-            <a href="index.html">トップ</a><!-- /.header-links -->
-          </li><!-- /.header-item -->
-          <li>
-            <a href="archive.html">ニュース</a><!-- /.header-links -->
-          </li><!-- /.header-item -->
-          <li>
-            <a href="story.html">ストーリー</a><!-- /.header-links -->
-          </li><!-- /.header-item -->
-          <li>
-            <a href="comments.html">著名人コメント</a><!-- /.header-links -->
-          </li><!-- /.header-item -->
-          <li>
-            <a href="cast.html">キャスト</a><!-- /.header-links -->
-          </li><!-- /.header-item -->
-          <li>
-            <a href="inguiry.html">問い合わせ</a><!-- /.header-links -->
-          </li><!-- /.header-item -->
-          <li>
-            <a href="confilm.html">ご予約</a><!-- /.header-links -->
-          </li><!-- /.header-item -->
-        </ul><!-- /.header-list -->
-      </nav><!-- /.header-nav -->
-      <button class="drawer-btn">
-        <span class="bar bar-top"></span>
-        <span class="bar bar-mid"></span>
-        <span class="bar bar-bottom"></span>
-        <span class="drawer_menu_text drawer_text">Menu</span>
-        <span class="js-drawer_close drawer_text">Close</span>
-      </button><!-- /.drawer-btn -->
-      <span class="header-musk"></span>
-    </div><!-- /.header-inner -->
-  </header>
+<?php get_header(); ?>
 
   <!-- ファーストビュー -->
   <div class="fv">
     <div class="fv-content">
-      <h1 class="site-title"><img src="images/site-title.png" alt="世界最長の領事詩をピーター・ブルック以来の全編舞台化完全版マハーバーラタ"></h1><!-- /.site-title -->
+      <h1 class="site-title"><img src="<?php echo esc_url(get_theme_file_uri( 'images/site-title.png' )); ?>" alt="世界最長の領事詩をピーター・ブルック以来の全編舞台化完全版マハーバーラタ"></h1><!-- /.site-title -->
       <div class="fv-contents">
         <p class="schedule">
-          <img src="images/schedule.png" alt="2020年７月４日〜７日 なかのZERO大ホール">
+          <img src="<?php echo esc_url(get_theme_file_uri( 'images/schedule.png' )); ?>" alt="2020年７月４日〜７日 なかのZERO大ホール">
         </p><!-- /.schedule -->
         <p class="announcement">
           小池博史ブリッジプロジェクトが2013年から2020年までの8カ年計画で臨む、インド古代叙事詩「マハーバーラタ」の全編舞台作品化計画。いよいよその集大成である<span class="announcement-title">完全版マハーバーラタ</span><!-- /.announcement-title -->の公演が決定！！<br>
           アジア各国のアーティストらが共同で取り組み、発展を遂げる本事業はアジア、そして世界へ向けてビッグウェーブを起こす。タイと日本から世界へと発信する本作。どうぞお見逃しなく！
         </p><!-- /.announcement -->
       </div><!-- /.fv-contents -->
+      <a href="#" class="btn topPage-ticket-btn">チケット予約サイトへ</a><!-- /.btn -->
     </div><!-- /.fv-content -->
-    <a href="#" class="btn topPage-ticket-btn">チケット予約サイトへ</a><!-- /.btn -->
   </div><!-- /.fv -->
 
   <!-- メインコンテンツ -->
@@ -100,69 +41,37 @@
         <div class="section-content">
           <h2 class="section-head">NEWS</h2><!-- /.section-head -->
           <div class="section-contents">
-
-            <a href="news-single.html" class="contents-item">
+            <?php
+              $args = array(
+              'posts_per_page' => 5 // 表示件数
+              );
+              $posts = get_posts( $args );
+              foreach ( $posts as $post ): // ループの開始
+              setup_postdata( $post ); // 記事データの取得
+            ?>
+            <a href="<?php the_permalink(); ?>" class="contents-item">
               <picture class="news-img">
-                <img src="images/news-img1.jpg" alt="">
+                <!-- アイキャッチ画像が設定されているなら -->
+                <?php if ( has_post_thumbnail() ) : ?>
+                  <!-- アイキャッチ画像を大サイズで表示 -->
+                  <?php the_post_thumbnail( 'large' ); ?>
+                <?php else : ?>
+                <!-- アイキャッチ画像が無ければnoimage 画像を表示 -->
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/noimg.png" alt="NO IMAGEと灰色文字で記載された白背景画像">
+                <?php endif; ?>
               </picture><!-- /.news-img -->
               <div class="news-text">
-                <time class="article-time">2019.9.30</time><!-- /.article-time -->
-                <p class="news-head">
-                  「完全版マハーバーラタ」2020年7月・東京公演！！
-                </p><!-- /.news-head -->
+                <time class="article-time"><?php the_time( 'Y/n/j' ); ?></time><!-- /.article-time -->
+                <h1 class="news-head">
+                  <?php the_title(); ?>
+                </h1><!-- /.news-head -->
               </div><!-- /.news-text -->
             </a><!-- /.contents-item -->
-
-            <a href="#" class="contents-item">
-              <picture class="news-img">
-                <img src="images/news-img2.jpg" alt="">
-              </picture><!-- /.news-img -->
-              <div class="news-text">
-                <time class="article-time">2019.9.30</time><!-- /.article-time -->
-                <p class="news-head">
-                  ニュースのタイトルが入ります。ニュースのタイトルが入ります。
-                </p><!-- /.news-head -->
-              </div><!-- /.news-text -->
-            </a><!-- /.contents-item -->
-
-            <a href="#" class="contents-item">
-              <picture class="news-img">
-                <img src="images/news-img3.jpg" alt="">
-              </picture><!-- /.news-img -->
-              <div class="news-text">
-                <time class="article-time">2019.9.30</time><!-- /.article-time -->
-                <p class="news-head">
-                  ニュースのタイトルが入ります。ニュースのタイトルが入ります。
-                </p><!-- /.news-head -->
-              </div><!-- /.news-text -->
-            </a><!-- /.contents-item -->
-
-            <a href="#" class="contents-item">
-              <picture class="news-img">
-                <img src="images/news-img2.jpg" alt="">
-              </picture><!-- /.news-img -->
-              <div class="news-text">
-                <time class="article-time">2019.9.30</time><!-- /.article-time -->
-                <p class="news-head">
-                  ニュースのタイトルが入ります。
-                </p><!-- /.news-head -->
-              </div><!-- /.news-text -->
-            </a><!-- /.contents-item -->
-
-            <a href="#" class="contents-item">
-              <picture class="news-img">
-                <img src="images/news-img2.jpg" alt="">
-              </picture><!-- /.news-img -->
-              <div class="news-text">
-                <time class="article-time">2019.9.30</time><!-- /.article-time -->
-                <p class="news-head">
-                  ニュースのタイトルが入ります。
-                </p><!-- /.news-head -->
-              </div><!-- /.news-text -->
-            </a><!-- /.contents-item -->
-
+            <?php
+              endforeach; // ループの終了
+            ?>
           </div><!-- /.section-contents -->
-          <a href="news-archive.html" class="btn news-btn">ニュース一覧へ</a><!-- /.btn -->
+          <a href="<?php echo home_url( '/category/news' ); ?>" class="btn news-btn">ニュース一覧へ</a><!-- /.btn -->
         </div><!-- /.section-content -->
       </div><!-- /.section-inner -->
     </section><!-- /.section -->
@@ -176,7 +85,7 @@
               マハー（偉大な）、バーラタ（バラタ族）、つまり「偉大なバラタ族」の物語。神々が人間界を作り出すところから始まり、バラタ族の中のクル家とパーンドゥ家という二つの部族間の対立を巡るストーリー。神の血を引く個性豊かな登場人物たちによる差別、対立、欲望、嫉妬など、生の苦しみが描かれ、最終的には一族が破滅していく。<br>
               世界的な文学作品古代ギリシャの「イーリアス」「オデュッセイア」と並ぶ世界三大叙事詩の一つに数えられており、「ラーマーヤナ」と双璧を成すインド二大叙事詩の一つ。原語はサンスクリット語であるが、全18巻、10万詩節を超えるその長さは聖書の約4倍と言われ、原典の日本語訳はいまだ完結していない。
             </p><!-- /.story -->
-            <a href="story.html" class="btn more-btn">もっと詳しく</a><!-- /.btn -->
+            <a href="<?php echo home_url( '/story' ); ?>" class="btn more-btn">もっと詳しく</a><!-- /.btn -->
           </div><!-- /.section-contents -->
         </div><!-- /.section-content -->
       </div><!-- /.section-inner -->
@@ -196,7 +105,7 @@
               「文に非ず、其の義に非ず、唯だ一部の意のみ。」<br>
               まずこの聖句が浮かんだ。境界線に立つ人類。超越する意志。小池<br>博史氏の心象が生み出したアバターが乱舞しながら深層意識に波紋<br>を起こしてゆく。
             </p><!-- /.director-message -->
-            <a href="comments.html" class="btn more-btn">もっと見る</a><!-- /.btn -->
+            <a href="<?php echo home_url( '/comments' ); ?>" class="btn more-btn">もっと見る</a><!-- /.btn -->
           </div><!-- /.section-contents -->
         </div><!-- /.section-content -->
       </div><!-- /.section-inner -->
@@ -207,9 +116,8 @@
         <div class="section-content">
           <h2 class="section-head">CAST</h2><!-- /.section-head -->
           <div class="section-contents">
-
             <div class="cast-item">
-              <div class="cast-img"><img src="images/cast-img1.jpg" alt=""></div><!-- /.cast-img -->
+              <div class="cast-img"><img src="<?php echo esc_url(get_theme_file_uri( 'images/cast-img1.jpg' )); ?>" alt=""></div><!-- /.cast-img -->
               <p class="cast-role">作・演出・振付・構成</p><!-- /.cast-role -->
               <p class="cast-name">小池博史</p><!-- /.cast-name -->
               <p class="cast-career">
@@ -221,9 +129,8 @@
                 著書に「ロンググッドバイ～パパ・タラフマラとその時代」（青幻舎刊）、「からだのこえをきく」（新潮社刊）等。
               </p><!-- /.cast-career -->
             </div><!-- /.cast-item -->
-
             <div class="cast-item">
-              <div class="cast-img"><img src="images/cast-img2.jpg" alt=""></div><!-- /.cast-img -->
+              <div class="cast-img"><img src="<?php echo esc_url(get_theme_file_uri( 'images/cast-img2.jpg' )); ?>" alt=""></div><!-- /.cast-img -->
               <p class="cast-role">出演</p><!-- /.cast-role -->
               <p class="cast-name">白井さち子</p><!-- /.cast-name -->
               <p class="profession">
@@ -242,9 +149,8 @@
                 これまで約35カ国での公演に参加、そのパフォーマンスは世界各地で認められ、高く評価されている。
               </p><!-- /.cast-career -->
             </div><!-- /.cast-item -->
-
             <div class="cast-item">
-              <div class="cast-img"><img src="images/cast-img3.jpg" alt=""></div><!-- /.cast-img -->
+              <div class="cast-img"><img src="<?php echo esc_url(get_theme_file_uri( 'images/cast-img3.jpg' )); ?>" alt=""></div><!-- /.cast-img -->
               <p class="cast-role">出演</p><!-- /.cast-role -->
               <p class="cast-name">小谷野哲郎</p><!-- /.cast-name -->
               <p class="profession">(バリ舞踏)</p><!-- /.profession -->
@@ -256,9 +162,8 @@
                 パパ・タラフマラ作品では「ガリバー＆スウィフト」「パンク・ドンキホーテ」「白雪姫」に、小池博史ブリッジプロジェクトでは「注文の多い料理店」「風の又三郎」に出演。
               </p><!-- /.cast-career -->
             </div><!-- /.cast-item -->
-
           </div><!-- /.section-contents -->
-          <a href="cast.html" class="cast-more-btn">もっと見る</a><!-- /.cast-more-btn -->
+          <a href="<?php echo home_url( '/cast' ); ?>" class="cast-more-btn">もっと見る</a><!-- /.cast-more-btn -->
         </div><!-- /.section-content -->
       </div><!-- /.section-inner -->
     </section><!-- /.section -->
@@ -303,7 +208,7 @@
         </div><!-- /.section-content -->
 
         <div class="buttons">
-          <a href="inguiry.html" class="btn contact-btn">お問い合わせはこちら</a><!-- /.btn -->
+          <a href="<?php echo home_url('/inguiry'); ?>" class="btn contact-btn">お問い合わせはこちら</a><!-- /.btn -->
           <a href="#" class="btn ticket-btn">チケット予約サイトへ</a><!-- /.btn -->
         </div><!-- /.buttons -->
 
@@ -311,16 +216,4 @@
     </section><!-- /.section -->
   </main>
 
-  <!-- フッター -->
-  <footer class="footer">
-    <small class="copy">Copyright © 2019 完全版マハーバーラタ All Rights Reserved.</small><!-- /.copy -->
-  </footer>
-
-  <!-- スクロールトップボタン -->
-  <button id="scrollTop" class="scrollTop"><i class="fas fa-chevron-up fa-lg"></i></button>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
-
-</body><!-- /.top-page -->
-</html>
+<?php get_footer(); ?>

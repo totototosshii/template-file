@@ -1,7 +1,8 @@
-@import "setting/functions.scss";
-@import "setting/variables.scss";
-@import "setting/bace.scss";
-@import "setting/inner.scss";
-@import "project/index.scss";
-@import "project/header.scss";
-@import "project/footer.scss";
+@import "Foundation/variables.scss";
+@import "Foundation/reset.scss";
+@import "Foundation/base.scss";
+@import "Layout/inner.scss";
+@import "Layout/header.scss";
+@import "Layout/main.scss";
+@import "Layout/footer.scss";
+@import "Component/c-button.scss";

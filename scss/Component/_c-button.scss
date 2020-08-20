@@ -1,0 +1,221 @@
+// --------------------------------
+//            ボタン共通
+// --------------------------------
+.btn{
+  display: block;
+  background-color: $btn-base;
+  color: $txtw;
+  font-weight: $fw-w6;
+  text-align: center;
+}
+
+
+// --------------------------------
+//            もっと見る
+// --------------------------------
+.more-btn{
+  line-height: 36.5px;
+  font-size: 14px;
+  max-width: 116px;
+  height: 36.5px;
+  padding: 0 16px;
+  margin-left: auto;
+  @include mq('sp'){
+    margin: auto;
+  }
+}
+
+
+// --------------------------------
+//        もっと見る(CAST)
+// --------------------------------
+.cast-more-btn{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: $fw-w6;
+  color: $btn-base;
+  border: 5px solid $btn-base;
+  max-width: 116px;
+  height: 45px;
+  line-height: 35px;
+  margin: 0 auto;
+  &:hover{
+    background-color: $btn-base;
+    color: $txtw;
+  }
+}
+
+
+// --------------------------------
+//          ニュース一覧
+// --------------------------------
+.news-btn{
+  line-height: 40px;
+  font-size: 14px;
+  max-width: 121px;
+  height: 40px;
+  padding: 0 12px;
+  position: absolute;
+  top: 24px;
+  right: 0;
+  @include mq('tab'){
+    right: 5vw;
+  }
+  @include mq('sp'){
+    position: static;
+    margin: auto;
+  }
+}
+
+
+// --------------------------------
+//          お問い合わせ
+// --------------------------------
+.contact-btn{
+  background-color: $btn-contact;
+  font-size: 13px;
+  max-width: 193px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 31px;
+  margin-right: 15px;
+  @include mq('sp'){
+    margin-right: 0;
+    margin-bottom: 4vw;
+  }
+}
+
+
+// --------------------------------
+//          チケット予約
+// --------------------------------
+.ticket-btn{
+  font-size: 13px;
+  max-width: 193px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 31px;
+  margin-left: 15px;
+  @include mq('sp'){
+    margin-left: 0;
+  }
+}
+
+
+// ----------------------------------------------------------------
+//        チケット予約（トップページのファーストビュー内）
+// ----------------------------------------------------------------
+.topPage-ticket-btn{
+  line-height: 60px;
+  font-size: 14px;
+  min-width: 200px;
+  height: 60px;
+  padding: 0 30px;
+  margin-left: auto;
+  position: absolute;
+  right: 0;
+  bottom: -22%;
+  @include mq('tab'){
+    bottom: -28%;
+  }
+  @include mq('sp'){
+    right: 50%;
+    bottom: -70px;
+    transform: translateX(50%);
+  }
+}
+
+
+// ----------------------------------------------------------------
+//                チケット予約（下層ページのトップ）
+// ----------------------------------------------------------------
+.underlayer-ticket-btn{
+  line-height: division(22, 12);
+  font-size: 12px;
+  max-width: 150px;
+  padding: 14px 15px;
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+  @include mq('tab'){
+    bottom: -90px;
+  }
+  @include mq('sp'){
+    bottom: -50px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+
+// --------------------------------
+//            送信ボタン
+// --------------------------------
+.submit-btn{
+  max-width: 200px;
+  font-size: 18px;
+  font-weight: $fw-w6;
+  line-height: division(22, 18);
+  padding: 21px 82px;
+  margin: 0 auto;
+  cursor: pointer;
+  &:hover{
+    transition : .3s;
+    opacity: .8;
+  }
+}
+
+// Contact Form 7導入時に.btnと.submit-btnのスタイルを統合してクラス名→.wpcf7-submitに書き換えて配色に!importantを付け加える
+.wpcf7-submit{
+  display: block;
+  background-color: $btn-base !important;
+  color: $txtw !important;
+  font-weight: $fw-w6;
+  text-align: center;
+  max-width: 200px;
+  font-size: 18px;
+  font-weight: $fw-w6;
+  line-height: division(22, 18);
+  padding: 21px 82px;
+  margin: 0 auto;
+  cursor: pointer;
+  &:hover{
+    transition : .3s;
+    opacity: .8;
+  }
+}
+
+
+// --------------------------------
+//     スクロールトップボタン
+// --------------------------------
+.scrollTop {
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/scroll-top.png);
+  border: 2px solid $bgc-d;
+  display: none;
+  &:hover {
+    transform: translateY(-7px);
+    transition: all .8s;
+  }
+  .fa-chevron-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $bgc-d;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// --------------------------------
+//       jsで変更される箇所
+// --------------------------------
+.is-fadein {
+  display: block;
+  cursor: pointer;
+}

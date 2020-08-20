@@ -1,0 +1,256 @@
+.header{
+  width: 100vw;
+  height: 90px;
+  background-image: url(../images/bgi-header.jpg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  &inner{
+    width: 90%;
+    @include mq('tab'){
+      position: relative;
+    }
+    @include mq('sp'){
+      position: relative;
+    }
+  }
+
+  //ヘッダーメニュー
+  .header-nav{
+    max-width: 664px;
+    margin: auto;
+    text-align: center;
+    @include mq('tab'){
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 30;
+      transform: translateX(-100%);
+    }
+    @include mq('sp'){
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 30;
+      transform: translateX(-100%);
+    }
+    .header-list{
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      @include mq('tab'){
+        flex-direction: column;
+        @include cc;
+      }
+      @include mq('sp'){
+        flex-direction: column;
+        @include cc;
+      }
+      li{
+        margin: auto 15px;
+        text-align: center;
+        font-weight: $fw-w6;
+        @include mq('tab'){
+          vertical-align: bottom;
+          color: $txtw;
+          align-items: center;
+          text-align: left;
+          margin-bottom: 32px;
+        }
+        @include mq('sp'){
+          vertical-align: bottom;
+          color: $txtw;
+          align-items: center;
+          text-align: left;
+          margin-bottom: 20px;
+        }
+        a{
+          display: block;
+          font-size: 12px;
+          @include mq('tab'){
+            font-size: 18px;
+          }
+          @include mq('sp'){
+            font-size: 16px;
+          }
+          &::after{
+            display: block;
+            text-transform: uppercase;
+            font-size: 22px;
+            @include mq('tab'){
+              display: none;
+            }
+            @include mq('sp'){
+              display: none;
+            }
+          }
+        }
+        &:nth-of-type(1){
+          a{
+            &::after{
+              content: "top";
+            }
+          }
+        }
+        &:nth-of-type(2){
+          a{
+            &::after{
+              content: "news";
+            }
+          }
+        }
+        &:nth-of-type(3){
+          a{
+            &::after{
+              content: "story";
+            }
+          }
+        }
+        &:nth-of-type(4){
+          a{
+            &::after{
+              content: "comments";
+            }
+          }
+        }
+        &:nth-of-type(5){
+          a{
+            &::after{
+              content: "cast";
+            }
+          }
+        }
+        &:nth-of-type(6){
+          a{
+            &::after{
+              content: "inquiry";
+            }
+          }
+        }
+        &:nth-of-type(7){
+          a{
+            &::after{
+              content: "reserve";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// --------------------------------
+//       ハンバーガーボタン
+// --------------------------------
+.drawer-btn{
+  display: block;
+  position: fixed;
+  top: 9vw;
+  right: 4vw;
+  transition: all .4s;
+  width: 38px;
+  height: 20px;
+  z-index: 100;
+  padding: 0;
+  border:none;
+  &:focus{
+    outline: none;
+  }
+  @include mq('pc'){
+    display: none;
+  }
+  @include mq('tab'){
+    top: 4vw;
+  }
+}
+
+.bar{
+  display: block;
+  transition: all .4s;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: $txtd;
+  &:nth-of-type(1){
+    top: 0;
+  }
+  &:nth-of-type(2){
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:nth-of-type(3){
+    bottom: 0;
+  }
+}
+
+// ----------------------------------------------------------------
+//          ハンバーガーボタン下のMenuとCloseのスタイル
+// ----------------------------------------------------------------
+.drawer_text {
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+.drawer_menu_text.is-active {
+  display: none;
+}
+.js-drawer_close.is-active {
+  display: block;
+  color: $txtw;
+}
+.js-drawer_close {
+  display: none;
+}
+
+// --------------------------------
+//       jsで変更される箇所
+// --------------------------------
+// ドロワーメニューが開いたとき(SP時)
+.header-nav.is-active{
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform .3s,opacity .3s;
+}
+.header-musk{
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color:rgba(51,51,51,.85);
+  z-index: 20;
+}
+.drawer-btn.is-active .bar:nth-of-type(1){
+  transform: translateY(9px) rotate(-315deg);
+  background-color: $txtw;
+}
+.drawer-btn.is-active .bar:nth-of-type(2){
+  opacity: 0;
+}
+.drawer-btn.is-active .bar:nth-of-type(3){
+  transform: translateY(-9px) rotate(315deg);
+  background-color: $txtw;
+}
+.drawer_menu_text.is-active {
+  display: none;
+}
+.js-drawer_close.is-active {
+  display: block;
+}
+.js-drawer_close {
+  display: none;
+}
+body.noscroll {
+  overflow: hidden;
+}
