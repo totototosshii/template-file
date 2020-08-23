@@ -17,6 +17,7 @@ function my_setup() {
     'gallery',
     'caption',
   ) );
+  add_theme_support( 'wp-block-styles' );
   if ( ! isset ($content_width ) ) {					 /* コンテンツの横幅をセット */
     $content_width = 840;
 	}

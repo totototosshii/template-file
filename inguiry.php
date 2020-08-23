@@ -45,42 +45,35 @@
       </div><!-- /.section-inner -->
     </section><!-- /.section -->
 
-    <section class="section">
+    <section class="section" data-fadeIn>
       <div class="section-inner">
         <div class="section-content">
           <h2 class="section-head">SCHEDULE</h2><!-- /.section-head -->
           <div class="section-contents">
-            <ul class="schedule-list">
-
-              <li class="schedule-item">
-                <time class="schedule-time">2020.07.04</time>
-                <p class="start-time">17:00開演</p>
-                <p class="place">中野ZERO大ホール</p><!-- /.place -->
-                <a href="#" class="ticket-link">チケット予約受付中</a><!-- /.ticket-link -->
-              </li><!-- /.schedule-item -->
-
-              <li class="schedule-item">
-                <time class="schedule-time">2020.07.05</time>
-                <p class="start-time">17:00開演</p>
-                <p class="place">中野ZERO大ホール</p><!-- /.place -->
-                <a href="#" class="ticket-link">チケット予約受付中</a><!-- /.ticket-link -->
-              </li><!-- /.schedule-item -->
-
-              <li class="schedule-item">
-                <time class="schedule-time">2020.07.06</time>
-                <p class="start-time">17:00開演</p>
-                <p class="place">中野ZERO大ホール</p><!-- /.place -->
-                <a href="#" class="ticket-link">チケット予約受付中</a><!-- /.ticket-link -->
-              </li><!-- /.schedule-item -->
-
-              <li class="schedule-item">
-                <time class="schedule-time">2020.07.07</time>
-                <p class="start-time">17:00開演</p>
-                <p class="place">中野ZERO大ホール</p><!-- /.place -->
-                <a href="#" class="ticket-link">チケット予約受付中</a><!-- /.ticket-link -->
-              </li><!-- /.schedule-item -->
-
-            </ul><!-- /.schedule-list -->
+            <?php
+              $page_id = get_page_by_path('top-page');
+              if(have_rows('repeat_schedule', $page_id)):
+            ?>
+              <ul class="schedule-list">
+                <?php $page_counter = 4; ?><!-- 表示件数 -->
+                <?php while(have_rows('repeat_schedule', $page_id)): the_row(); ?>
+                <?php $page_counter--; ?>
+                  <!-- ループ内容 -->
+                  <li class="schedule-item">
+                    <time class="schedule-time"><?php the_sub_field('schedule_date'); ?></time>
+                    <p class="start-time"><?php the_sub_field('schedule_starttime'); ?></p>
+                    <p class="place"><?php the_sub_field('schedule_place'); ?></p><!-- /.place -->
+                    <?php
+                      $link = get_sub_field('schedule_linktext');
+                      if( $link ):
+                    ?>
+                      <a href="<?php echo $link; ?>" class="ticket-link">チケット予約受付中</a><!-- /.ticket-link -->
+                    <?php endif; ?>
+                  </li><!-- /.schedule-item -->
+                <?php if ($page_counter === 0) break; ?>
+                <?php endwhile; ?>
+              </ul><!-- /.schedule-list -->
+            <?php endif; ?>
           </div><!-- /.section-contents -->
         </div><!-- /.section-content -->
 
