@@ -95,81 +95,42 @@
     <section class="section" data-fadeIn>
       <div class="section-inner">
         <div class="section-content">
+          <?php
+            $page_id = get_page_by_path('cast');
+            if(have_rows('repeat_cast', $page_id)):
+          ?>
           <div class="section-contents">
-
-            <div class="cast-item">
-              <div class="cast-img">
-                <img src="<?php echo esc_url(get_theme_file_uri( 'images/cast-img2.jpg' )); ?>" alt="">
-              </div><!-- /.cast-img -->
-              <div class="status">
-                <p class="cast-role">出演</p><!-- /.cast-role -->
-                <p class="cast-name">白井さち子</p><!-- /.cast-name -->
-                <p class="profession">
-                  (バレエ、コンテンポラリーダンス)
-                </p><!-- /.profession -->
-                <p class="cast-career">
-                  7歳よりクラシックバレエを始める。<br>
-                  82年より6年間橘バレエ学校に在籍。<br>
-                  牧阿佐美に師事。<br>
-                </p><!-- /.cast-career -->
-              </div><!-- /.status -->
-            </div><!-- /.cast-item -->
-
-            <div class="cast-item">
-              <div class="cast-img">
-                <img src="<?php echo esc_url(get_theme_file_uri( 'images/cast-img2.jpg' )); ?>" alt="">
-              </div><!-- /.cast-img -->
-              <div class="status">
-                <p class="cast-role">出演</p><!-- /.cast-role -->
-                <p class="cast-name">白井さち子</p><!-- /.cast-name -->
-                <p class="profession">
-                  (バレエ、コンテンポラリーダンス)
-                </p><!-- /.profession -->
-                <p class="cast-career">
-                  7歳よりクラシックバレエを始める。<br>
-                  82年より6年間橘バレエ学校に在籍。<br>
-                  牧阿佐美に師事。<br>
-                </p><!-- /.cast-career -->
-              </div><!-- /.status -->
-            </div><!-- /.cast-item -->
-
-            <div class="cast-item">
-              <div class="cast-img">
-                <img src="<?php echo esc_url(get_theme_file_uri( 'images/cast-img2.jpg' )); ?>" alt="">
-              </div><!-- /.cast-img -->
-              <div class="status">
-                <p class="cast-role">出演</p><!-- /.cast-role -->
-                <p class="cast-name">白井さち子</p><!-- /.cast-name -->
-                <p class="profession">
-                  (バレエ、コンテンポラリーダンス)
-                </p><!-- /.profession -->
-                <p class="cast-career">
-                  7歳よりクラシックバレエを始める。<br>
-                  82年より6年間橘バレエ学校に在籍。<br>
-                  牧阿佐美に師事。<br>
-                </p><!-- /.cast-career -->
-              </div><!-- /.status -->
-            </div><!-- /.cast-item -->
-
-            <div class="cast-item">
-              <div class="cast-img">
-                <img src="<?php echo esc_url(get_theme_file_uri( 'images/cast-img2.jpg' )); ?>" alt="">
-              </div><!-- /.cast-img -->
-              <div class="status">
-                <p class="cast-role">出演</p><!-- /.cast-role -->
-                <p class="cast-name">白井さち子</p><!-- /.cast-name -->
-                <p class="profession">
-                  (バレエ、コンテンポラリーダンス)
-                </p><!-- /.profession -->
-                <p class="cast-career">
-                  7歳よりクラシックバレエを始める。<br>
-                  82年より6年間橘バレエ学校に在籍。<br>
-                  牧阿佐美に師事。<br>
-                </p><!-- /.cast-career -->
-              </div><!-- /.status -->
-            </div><!-- /.cast-item -->
-
+            <?php $page_counter = 4; ?><!-- 表示件数 -->
+            <?php while(have_rows('repeat_cast', $page_id)): the_row(); ?>
+              <?php $page_counter--; ?>
+              <!-- ループ内容 -->
+              <div class="cast-item">
+                <div class="cast-img">
+                  <?php
+                    $image = get_sub_field('cast_img');
+                    if( !empty( $image ) ):
+                  ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                  <?php endif; ?>
+                </div><!-- /.cast-img -->
+                <div class="status">
+                  <p class="cast-role"><?php the_sub_field('cast_role'); ?></p><!-- /.cast-role -->
+                  <p class="cast-name"><?php the_sub_field('cast_name'); ?></p><!-- /.cast-name -->
+                  <p class="profession">
+                    <?php the_sub_field('cast_profession'); ?>
+                  </p><!-- /.profession -->
+                  <?php
+                    $career = get_sub_field('cast_career',false);
+                    if( $career ):
+                  ?>
+                    <p class="cast-career"><?php echo nl2br($career); ?></p><!-- /.cast-career -->
+                  <?php endif; ?>
+                </div><!-- /.status -->
+              </div><!-- /.cast-item -->
+              <?php if ($page_counter === 0) break; ?>
+            <?php endwhile; ?>
           </div><!-- /.section-contents -->
+          <?php endif; ?>
         </div><!-- /.section-content -->
       </div><!-- /.section-inner -->
     </section><!-- /.section -->

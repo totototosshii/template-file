@@ -3238,6 +3238,10 @@ body.noscroll {
   border-radius: 50%;
 }
 
+.cast .section:nth-of-type(2) .cast-item .status {
+  max-width: 203.3px;
+}
+
 .cast .section:nth-of-type(2) .cast-item .cast-role {
   font-size: 17px;
 }
