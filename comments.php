@@ -47,117 +47,33 @@
     <section class="section" data-fadeIn>
       <div class="section-inner">
         <div class="section-content">
+          <?php
+            $page_id = get_page_by_path('comments');
+            if(have_rows('repeat_comment', $page_id)):
+          ?>
           <div class="section-contents">
-
-            <div class="comment-item">
-              <h4 class="comment-item-name">
-                今福龍太
-              </h4><!-- /.comment-item-name -->
-              <p class="profession">
-                文化人類学者
-              </p><!-- /.profession -->
-              <p class="comment-message">
-                蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-              </p><!-- /.comment-message -->
-            </div><!-- /.comment-item -->
-
-            <div class="comment-item">
-              <h4 class="comment-item-name">
-                今福龍太
-              </h4><!-- /.comment-item-name -->
-              <p class="profession">
-                文化人類学者
-              </p><!-- /.profession -->
-              <p class="comment-message">
-                蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-              </p><!-- /.comment-message -->
-            </div><!-- /.comment-item -->
-
-            <div class="comment-item">
-              <h4 class="comment-item-name">
-                今福龍太
-              </h4><!-- /.comment-item-name -->
-              <p class="profession">
-                文化人類学者
-              </p><!-- /.profession -->
-              <p class="comment-message">
-                蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-              </p><!-- /.comment-message -->
-            </div><!-- /.comment-item -->
-
-            <div class="comment-item">
-              <h4 class="comment-item-name">
-                今福龍太
-              </h4><!-- /.comment-item-name -->
-              <p class="profession">
-                文化人類学者
-              </p><!-- /.profession -->
-              <p class="comment-message">
-                蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-              </p><!-- /.comment-message -->
-            </div><!-- /.comment-item -->
-
-            <div class="comment-item">
-              <h4 class="comment-item-name">
-                今福龍太
-              </h4><!-- /.comment-item-name -->
-              <p class="profession">
-                文化人類学者
-              </p><!-- /.profession -->
-              <p class="comment-message">
-                蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-              </p><!-- /.comment-message -->
-            </div><!-- /.comment-item -->
-
-            <div class="comment-item">
-              <h4 class="comment-item-name">
-                今福龍太
-              </h4><!-- /.comment-item-name -->
-              <p class="profession">
-                文化人類学者
-              </p><!-- /.profession -->
-              <p class="comment-message">
-                蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-              </p><!-- /.comment-message -->
-            </div><!-- /.comment-item -->
-
-            <div class="comment-item">
-              <h4 class="comment-item-name">
-                今福龍太
-              </h4><!-- /.comment-item-name -->
-              <p class="profession">
-                文化人類学者
-              </p><!-- /.profession -->
-              <p class="comment-message">
-                蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-              </p><!-- /.comment-message -->
-            </div><!-- /.comment-item -->
-
-            <div class="comment-item">
-              <h4 class="comment-item-name">
-                今福龍太
-              </h4><!-- /.comment-item-name -->
-              <p class="profession">
-                文化人類学者
-              </p><!-- /.profession -->
-              <p class="comment-message">
-                蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-              </p><!-- /.comment-message -->
-            </div><!-- /.comment-item -->
-
-            <div class="comment-item">
-              <h4 class="comment-item-name">
-                今福龍太
-              </h4><!-- /.comment-item-name -->
-              <p class="profession">
-                文化人類学者
-              </p><!-- /.profession -->
-              <p class="comment-message">
-                蝶は風を受けて飛ぶ。いやむしろ、風を切って飛ぶ。いやさらにいえば、みずから風を孕み風を生み出す。<br>吹きすさび循環する大風のような物語。小池舞台はそんな物語を生成する未知なる蝶の飛翔だ。
-              </p><!-- /.comment-message -->
-            </div><!-- /.comment-item -->
-
+            <?php $page_counter = 9; ?><!-- 表示件数 -->
+            <?php while(have_rows('repeat_comment', $page_id)): the_row(); ?>
+              <?php $page_counter--; ?>
+              <!-- ループ内容 -->
+              <div class="comment-item">
+                <h4 class="comment-item-name">
+                  <?php the_sub_field('repeat_name'); ?>
+                </h4><!-- /.comment-item-name -->
+                <p class="profession">
+                  <?php the_sub_field('repeat_profession'); ?>
+                </p><!-- /.profession -->
+                <?php
+                  $message = get_sub_field('repeat_message',false);
+                  if( $message ):
+                ?>
+                  <p class="comment-message"><?php echo nl2br($message); ?></p><!-- /.comment-message -->
+                <?php endif; ?>
+              </div><!-- /.comment-item -->
+              <?php if ($page_counter === 0) break; ?>
+            <?php endwhile; ?>
           </div><!-- /.section-contents -->
+          <?php endif; ?>
         </div><!-- /.section-content -->
       </div><!-- /.section-inner -->
     </section><!-- /.section -->
