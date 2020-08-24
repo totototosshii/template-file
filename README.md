@@ -10,6 +10,7 @@
   →CASTページ(左に画像、右にプロフィールのセクション×４の部分)<br>
   →COMMENTSページ(９件のコメント投稿)<br>
 ・スクロールトップボタンはJavaScript、ハンバーガーメニューと要素のフェードインはjQueryで実装｡<br>
+・SCHEDULEセクションをテンプレートパーツ化。<br>
 ・お問い合わせフォームの機能は｢[Contact Form 7](https://ja.wordpress.org/plugins/contact-form-7/)｣で実装｡<br>
 ※問い合わせフォームから送信後の画面は、メニューのご予約のところから見れます。<br><br>
 Basic認証をかけてます↓<br>
