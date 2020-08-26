@@ -19,7 +19,7 @@
       </section><!-- /.fv -->
 
       <!-- パンくずリスト -->
-      <p class="breadcrumbs">
+      <p class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
         <!-- Breadcrumb NavXT のパンくずを表示するための記述 -->
         <?php if(function_exists('bcn_display')){
             bcn_display();
