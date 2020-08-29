@@ -20,4 +20,12 @@ PASSWORD：password
 ### 使用言語
 HTML / CSS(SCSS) / jQuery / JavaScript / PHP
 
+### 使用プラグイン
+・「Advanced Custom Fields PRO」<br>
+・「All-in-One WP Migration」<br>
+・「Breadcrumb NavXT」<br>
+・「Contact Form 7」<br>
+・「Show Current Template」<br>
+・「Yoast Duplicate Post」
+
 ### [→実際のサイト](https://mahabharata.tosshii-portfolio.com/)
