@@ -5,7 +5,7 @@
 
 ### ポイント
 ・TOPと送信完了ページ内の記事は最新を５件取得して表示｡<br>
-・Advanced Custom Fieldsを導入して繰り返しフィールドを作成。<br>
+・「Advanced Custom Fields」を導入して繰り返しフィールドを作成。<br>
   →SCHEDULE(TOPの固定ページから入力し全ページに反映させるように設定)<br>
   →CASTページ(左に画像、右にプロフィールのセクション×４の部分)<br>
   →COMMENTSページ(９件のコメント投稿)<br>
