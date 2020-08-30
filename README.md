@@ -25,6 +25,7 @@ HTML / CSS(SCSS) / jQuery / JavaScript / PHP
 ・「All-in-One WP Migration」<br>
 ・「Breadcrumb NavXT」<br>
 ・「Contact Form 7」<br>
+・「Edit Author Slug」<br>
 ・「Show Current Template」<br>
 ・「Yoast Duplicate Post」
 
