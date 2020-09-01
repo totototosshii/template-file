@@ -41,7 +41,7 @@ function my_script_init() {
 	// CSS の読み込み.
   wp_enqueue_style( 'style-css',
                     get_template_directory_uri() . '/css/style.css', array(),
-                    '1.0.3',
+                    '1.0.4',
                     'all'
                   );
 	// JS の読み込み  jquery を先に読み込む  </body> 終了タグの前に配置.
