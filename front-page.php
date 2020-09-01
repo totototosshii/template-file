@@ -56,7 +56,7 @@
                   <!-- アイキャッチ画像を大サイズで表示 -->
                   <?php the_post_thumbnail( 'large' ); ?>
                 <?php else : ?>
-                <!-- アイキャッチ画像が無ければnoimage 画像を表示 -->
+                  <!-- アイキャッチ画像が無ければnoimage 画像を表示 -->
                   <img src="<?php echo get_template_directory_uri(); ?>/images/noimg.png" alt="NO IMAGEと灰色文字で記載された白背景画像">
                 <?php endif; ?>
               </picture><!-- /.news-img -->

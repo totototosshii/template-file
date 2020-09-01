@@ -52,6 +52,59 @@
   line-height: division(21, 12);
 }
 
+// スケジュールセクション
+  .section:last-of-type{
+    padding: 60px 0;
+    .section-content{
+      background-color: rgba(255,255,255,.25);
+      padding-top: 30px;
+      padding-bottom: 55.5px;
+      margin-bottom: 30px;
+    }
+    .section-head{
+      margin-bottom: 25.5px;
+    }
+    .schedule-item{
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: $fw-w6;
+      &:not(:last-of-type){
+        margin-bottom: 25px;
+      }
+      @include mq('sp'){
+        flex-wrap: wrap;
+      }
+    }
+    .schedule-time{
+      font-size: 20px;
+      margin-right: 13px;
+    }
+    .start-time{
+      margin-right: 30px;
+      @include mq('sp'){
+        margin-right: 0;
+      }
+    }
+    .place{
+      margin-right: 30px;
+    }
+    .ticket-link{
+      display: block;
+      border-bottom: 1px solid $txtd;
+      @include mq('sp'){
+        margin-right: 30px;
+      }
+    }
+    .buttons{
+      display: flex;
+      justify-content: center;
+      @include mq('sp'){
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
 
 // --------------------------------
 //        jsで変更される箇所
@@ -493,60 +546,6 @@
     }
   }
 
-  // スケジュールセクション
-  .section:last-of-type{
-    padding: 60px 0;
-    .section-content{
-      background-color: rgba(255,255,255,.25);
-      padding-top: 30px;
-      padding-bottom: 55.5px;
-      margin-bottom: 30px;
-    }
-    .section-head{
-      margin-bottom: 25.5px;
-    }
-    .schedule-item{
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: $fw-w6;
-      &:not(:last-of-type){
-        margin-bottom: 25px;
-      }
-      @include mq('sp'){
-        flex-wrap: wrap;
-      }
-    }
-    .schedule-time{
-      font-size: 20px;
-      margin-right: 13px;
-    }
-    .start-time{
-      margin-right: 30px;
-      @include mq('sp'){
-        margin-right: 0;
-      }
-    }
-    .place{
-      margin-right: 30px;
-    }
-    .ticket-link{
-      display: block;
-      border-bottom: 1px solid $txtd;
-      @include mq('sp'){
-        margin-right: 30px;
-      }
-    }
-    .buttons{
-      display: flex;
-      justify-content: center;
-      @include mq('sp'){
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
-
 }
 
 
@@ -675,60 +674,6 @@
     }
   }
 
-
-  // スケジュールセクション
-  .section:last-of-type{
-    padding: 60px 0;
-    .section-content{
-      background-color: rgba(255,255,255,.25);
-      padding-top: 30px;
-      padding-bottom: 55.5px;
-      margin-bottom: 30px;
-    }
-    .section-head{
-      margin-bottom: 25.5px;
-    }
-    .schedule-item{
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: $fw-w6;
-      &:not(:last-of-type){
-        margin-bottom: 25px;
-      }
-      @include mq('sp'){
-        flex-wrap: wrap;
-      }
-    }
-    .schedule-time{
-      font-size: 20px;
-      margin-right: 13px;
-    }
-    .start-time{
-      margin-right: 30px;
-      @include mq('sp'){
-        margin-right: 0;
-      }
-    }
-    .place{
-      margin-right: 30px;
-    }
-    .ticket-link{
-      display: block;
-      border-bottom: 1px solid $txtd;
-      @include mq('sp'){
-        margin-right: 30px;
-      }
-    }
-    .buttons{
-      display: flex;
-      justify-content: center;
-      @include mq('sp'){
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
 }
 
 
@@ -919,59 +864,6 @@
     }
   }
 
-  // スケジュールセクション
-  .section:last-of-type{
-    padding: 60px 0;
-    .section-content{
-      background-color: rgba(255,255,255,.25);
-      padding-top: 30px;
-      padding-bottom: 55.5px;
-      margin-bottom: 30px;
-    }
-    .section-head{
-      margin-bottom: 25.5px;
-    }
-    .schedule-item{
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: $fw-w6;
-      &:not(:last-of-type){
-        margin-bottom: 25px;
-      }
-      @include mq('sp'){
-        flex-wrap: wrap;
-      }
-    }
-    .schedule-time{
-      font-size: 20px;
-      margin-right: 13px;
-    }
-    .start-time{
-      margin-right: 30px;
-      @include mq('sp'){
-        margin-right: 0;
-      }
-    }
-    .place{
-      margin-right: 30px;
-    }
-    .ticket-link{
-      display: block;
-      border-bottom: 1px solid $txtd;
-      @include mq('sp'){
-        margin-right: 30px;
-      }
-    }
-    .buttons{
-      display: flex;
-      justify-content: center;
-      @include mq('sp'){
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
 }
 
 
@@ -1244,59 +1136,6 @@
     }
   }
 
-  // スケジュールセクション
-  .section:last-of-type{
-    padding: 60px 0;
-    .section-content{
-      background-color: rgba(255,255,255,.25);
-      padding-top: 30px;
-      padding-bottom: 55.5px;
-      margin-bottom: 30px;
-    }
-    .section-head{
-      margin-bottom: 25.5px;
-    }
-    .schedule-item{
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: $fw-w6;
-      &:not(:last-of-type){
-        margin-bottom: 25px;
-      }
-      @include mq('sp'){
-        flex-wrap: wrap;
-      }
-    }
-    .schedule-time{
-      font-size: 20px;
-      margin-right: 13px;
-    }
-    .start-time{
-      margin-right: 30px;
-      @include mq('sp'){
-        margin-right: 0;
-      }
-    }
-    .place{
-      margin-right: 30px;
-    }
-    .ticket-link{
-      display: block;
-      border-bottom: 1px solid $txtd;
-      @include mq('sp'){
-        margin-right: 30px;
-      }
-    }
-    .buttons{
-      display: flex;
-      justify-content: center;
-      @include mq('sp'){
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
 }
 
 
@@ -1447,59 +1286,6 @@
     }
   }
 
-  // スケジュールセクション
-  .section:last-of-type{
-    padding: 60px 0;
-    .section-content{
-      background-color: rgba(255,255,255,.25);
-      padding-top: 30px;
-      padding-bottom: 55.5px;
-      margin-bottom: 30px;
-    }
-    .section-head{
-      margin-bottom: 25.5px;
-    }
-    .schedule-item{
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: $fw-w6;
-      &:not(:last-of-type){
-        margin-bottom: 25px;
-      }
-      @include mq('sp'){
-        flex-wrap: wrap;
-      }
-    }
-    .schedule-time{
-      font-size: 20px;
-      margin-right: 13px;
-    }
-    .start-time{
-      margin-right: 30px;
-      @include mq('sp'){
-        margin-right: 0;
-      }
-    }
-    .place{
-      margin-right: 30px;
-    }
-    .ticket-link{
-      display: block;
-      border-bottom: 1px solid $txtd;
-      @include mq('sp'){
-        margin-right: 30px;
-      }
-    }
-    .buttons{
-      display: flex;
-      justify-content: center;
-      @include mq('sp'){
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
 }
 
 
@@ -1742,59 +1528,6 @@
     }
   }
 
-  // スケジュールセクション
-  .section:last-of-type{
-    padding: 60px 0;
-    .section-content{
-      background-color: rgba(255,255,255,.25);
-      padding-top: 30px;
-      padding-bottom: 55.5px;
-      margin-bottom: 30px;
-    }
-    .section-head{
-      margin-bottom: 25.5px;
-    }
-    .schedule-item{
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: $fw-w6;
-      &:not(:last-of-type){
-        margin-bottom: 25px;
-      }
-      @include mq('sp'){
-        flex-wrap: wrap;
-      }
-    }
-    .schedule-time{
-      font-size: 20px;
-      margin-right: 13px;
-    }
-    .start-time{
-      margin-right: 30px;
-      @include mq('sp'){
-        margin-right: 0;
-      }
-    }
-    .place{
-      margin-right: 30px;
-    }
-    .ticket-link{
-      display: block;
-      border-bottom: 1px solid $txtd;
-      @include mq('sp'){
-        margin-right: 30px;
-      }
-    }
-    .buttons{
-      display: flex;
-      justify-content: center;
-      @include mq('sp'){
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
 }
 
 
@@ -1919,60 +1652,6 @@
     height: 60px;
     br{
       display: none;
-    }
-  }
-
-  // スケジュールセクション
-  .section:last-of-type{
-    padding: 60px 0;
-    .section-content{
-      background-color: rgba(255,255,255,.25);
-      padding-top: 30px;
-      padding-bottom: 55.5px;
-      margin-bottom: 30px;
-    }
-    .section-head{
-      margin-bottom: 25.5px;
-    }
-    .schedule-item{
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: $fw-w6;
-      &:not(:last-of-type){
-        margin-bottom: 25px;
-      }
-      @include mq('sp'){
-        flex-wrap: wrap;
-      }
-    }
-    .schedule-time{
-      font-size: 20px;
-      margin-right: 13px;
-    }
-    .start-time{
-      margin-right: 30px;
-      @include mq('sp'){
-        margin-right: 0;
-      }
-    }
-    .place{
-      margin-right: 30px;
-    }
-    .ticket-link{
-      display: block;
-      border-bottom: 1px solid $txtd;
-      @include mq('sp'){
-        margin-right: 30px;
-      }
-    }
-    .buttons{
-      display: flex;
-      justify-content: center;
-      @include mq('sp'){
-        flex-direction: column;
-        align-items: center;
-      }
     }
   }
 
@@ -2133,60 +1812,6 @@
         margin: 14px;
         line-height: 1;
         font-weight: $fw-w6;
-      }
-    }
-  }
-
-  // スケジュールセクション
-  .section:last-of-type{
-    padding: 60px 0;
-    .section-content{
-      background-color: rgba(255,255,255,.25);
-      padding-top: 30px;
-      padding-bottom: 55.5px;
-      margin-bottom: 30px;
-    }
-    .section-head{
-      margin-bottom: 25.5px;
-    }
-    .schedule-item{
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: $fw-w6;
-      &:not(:last-of-type){
-        margin-bottom: 25px;
-      }
-      @include mq('sp'){
-        flex-wrap: wrap;
-      }
-    }
-    .schedule-time{
-      font-size: 20px;
-      margin-right: 13px;
-    }
-    .start-time{
-      margin-right: 30px;
-      @include mq('sp'){
-        margin-right: 0;
-      }
-    }
-    .place{
-      margin-right: 30px;
-    }
-    .ticket-link{
-      display: block;
-      border-bottom: 1px solid $txtd;
-      @include mq('sp'){
-        margin-right: 30px;
-      }
-    }
-    .buttons{
-      display: flex;
-      justify-content: center;
-      @include mq('sp'){
-        flex-direction: column;
-        align-items: center;
       }
     }
   }

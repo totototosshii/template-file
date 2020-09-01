@@ -22,7 +22,7 @@
         bcn_display();
       }
     ?>
-  </p>
+  </p><!-- /.breadcrumbs -->
 
   <!-- メインコンテンツ -->
   <main>

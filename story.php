@@ -25,7 +25,7 @@
             bcn_display();
           }
         ?>
-      </p>
+      </p><!-- /.breadcrumbs -->
 
       <section class="fv-section">
         <div class="section-inner">
