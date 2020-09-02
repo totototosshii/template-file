@@ -3409,6 +3409,7 @@ body.noscroll {
 @media (max-width: 767px) {
   .more-btn {
     margin: auto;
+    font-size: 13px;
   }
 }
 
@@ -3423,6 +3424,12 @@ body.noscroll {
   height: 45px;
   line-height: 35px;
   margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .cast-more-btn {
+    font-size: 13px;
+  }
 }
 
 .cast-more-btn:hover {
@@ -3451,6 +3458,7 @@ body.noscroll {
   .news-btn {
     position: static;
     margin: auto;
+    font-size: 13px;
   }
 }
 
