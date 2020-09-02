@@ -482,8 +482,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  -webkit-animation: contentScale 2.6s forwards;
-          animation: contentScale 2.6s forwards;
   padding-top: 90px;
   min-height: 100vh;
   z-index: -100;
