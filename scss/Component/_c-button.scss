@@ -204,9 +204,10 @@
   background-image: url(../images/scroll-top.png);
   border: 2px solid $bgc-d;
   display: none;
-  &:hover {
+  &:hover, &:focus {
     transform: translateY(-7px);
     transition: all .8s;
+    box-shadow: 0 0 .5rem rgba(255, 255, 255, .5);
   }
   .fa-chevron-up {
     position: absolute;
@@ -220,7 +221,7 @@
 // --------------------------------
 //       jsで変更される箇所
 // --------------------------------
-.is-fadein {
+.scrollTop.is-fadeIn {
   display: block;
   cursor: pointer;
 }

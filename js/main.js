@@ -26,17 +26,18 @@ jQuery(window).on("scroll", function () {
 // --------------------------------
 //      スクロールトップボタン
 // --------------------------------
+
+//トップに戻るボタンの要素を取得
+let topButton = document.getElementById('scrollTop');
+
 //スクロール量を取得する関数
 function getScrolled() {
   return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
 }
 
-//トップに戻るボタンの要素を取得
-let topButton = document.getElementById('scrollTop');
-
 //ボタンの表示・非表示
 window.onscroll = function () {
-  (getScrolled() > 500) ? topButton.classList.add('is-fadein') : topButton.classList.remove('is-fadein');
+  (getScrolled() > 500) ? topButton.classList.add('is-fadeIn') : topButton.classList.remove('is-fadeIn');
 };
 
 //トップに移動する関数

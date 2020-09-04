@@ -3594,12 +3594,14 @@ body.noscroll {
   display: none;
 }
 
-.scrollTop:hover {
+.scrollTop:hover, .scrollTop:focus {
   -webkit-transform: translateY(-7px);
       -ms-transform: translateY(-7px);
           transform: translateY(-7px);
   -webkit-transition: all .8s;
   transition: all .8s;
+  -webkit-box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
 }
 
 .scrollTop .fa-chevron-up {
@@ -3612,7 +3614,7 @@ body.noscroll {
           transform: translate(-50%, -50%);
 }
 
-.is-fadein {
+.scrollTop.is-fadeIn {
   display: block;
   cursor: pointer;
 }
