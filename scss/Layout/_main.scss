@@ -43,6 +43,9 @@
       left: 50%;
       transform: translateX(-50%);
     }
+    @include mq('sp'){
+      top: 2px;
+    }
   }
 }
 
@@ -730,8 +733,20 @@
     }
   }
 
-  .fa-chevron-right:first-of-type{
-    display: none;
+  // パンくずリスト
+  .breadcrumbs{
+    @include mq('sp'){
+      flex-direction: column;
+      line-height: 2;
+      .fa-chevron-right::before{
+        transform: rotate(90deg);
+        top: -7px !important;
+        left: 10px;
+      }
+    }
+    .fa-chevron-right:first-of-type{
+      display: none;
+    }
   }
 
   // 記事内容セクション
