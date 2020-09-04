@@ -48,7 +48,7 @@ function my_script_init() {
   wp_enqueue_script( 'script-js',
                       get_template_directory_uri() . '/js/main.js',
                       array( 'jquery' ),
-                      '1.0.1',
+                      '1.0.2',
                       true
                     );
 }

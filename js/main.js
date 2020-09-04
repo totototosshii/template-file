@@ -7,7 +7,7 @@ jQuery('.drawer-btn').on('click', function () {
   jQuery('.drawer_menu_text').toggleClass('is-active');
   jQuery('.js-drawer_close').toggleClass('is-active');
   jQuery('.header-musk').fadeToggle(300);
-  jQuery('body').toggleClass('noscroll');
+  jQuery('body').toggleClass('noScroll');
 });
 
 

@@ -28,7 +28,7 @@
           )
         );
       ?>
-      <button class="drawer-btn">
+      <button type="button" class="drawer-btn">
         <span class="bar bar-top"></span>
         <span class="bar bar-mid"></span>
         <span class="bar bar-bottom"></span>
