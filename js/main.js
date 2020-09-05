@@ -27,14 +27,13 @@ jQuery(window).on("scroll", function () {
 //      スクロールトップボタン
 // --------------------------------
 window.onscroll = () => {
-
   //ボタンの要素を取得
   let topButton = document.getElementById('scrollTop');
 
   //スクロール量を取得する関数
   function getScrolled() {
     return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
-  }
+  };
 
   //ボタンの表示・非表示
   (getScrolled() > 500) ? topButton.classList.add('is-fadeIn') : topButton.classList.remove('is-fadeIn');
