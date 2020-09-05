@@ -3469,7 +3469,7 @@ a:hover {
 .drawer-btn {
   display: block;
   position: fixed;
-  top: 9vw;
+  top: 30px;
   right: 4vw;
   -webkit-transition: all .4s;
   transition: all .4s;
@@ -3486,15 +3486,9 @@ a:hover {
   }
 }
 
-@media (min-width: 768px) and (max-width: 839px) {
-  .drawer-btn {
-    top: 4vw;
-  }
-}
-
 @media (max-width: 767px) {
   .drawer-btn {
-    top: 5vw;
+    top: 20px;
   }
 }
 
