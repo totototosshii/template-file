@@ -26,30 +26,30 @@ jQuery(window).on("scroll", function () {
 // --------------------------------
 //      スクロールトップボタン
 // --------------------------------
+window.onscroll = () => {
 
-//トップに戻るボタンの要素を取得
-let topButton = document.getElementById('scrollTop');
+  //ボタンの要素を取得
+  let topButton = document.getElementById('scrollTop');
 
-//スクロール量を取得する関数
-function getScrolled() {
-  return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
-}
-
-//ボタンの表示・非表示
-window.onscroll = function () {
-  (getScrolled() > 500) ? topButton.classList.add('is-fadeIn') : topButton.classList.remove('is-fadeIn');
-};
-
-//トップに移動する関数
-function scrollToTop() {
-  let scrolled = getScrolled();
-  window.scrollTo(0, Math.floor(scrolled / 2));
-  if (scrolled > 0) {
-    window.setTimeout(scrollToTop, 60);
+  //スクロール量を取得する関数
+  function getScrolled() {
+    return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
   }
-};
 
-// スクロールトップ
-topButton.onclick = function () {
-  scrollToTop();
+  //ボタンの表示・非表示
+  (getScrolled() > 500) ? topButton.classList.add('is-fadeIn') : topButton.classList.remove('is-fadeIn');
+
+  //トップに移動する関数
+  function scrollToTop() {
+    let scrolled = getScrolled();
+    window.scrollTo(0, Math.floor(scrolled / 2));
+    if (scrolled > 0) {
+      window.setTimeout(scrollToTop, 60);
+    }
+  };
+
+  // スクロールトップ
+  topButton.onclick = () => {
+    scrollToTop();
+  };
 };
