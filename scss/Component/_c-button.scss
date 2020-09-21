@@ -197,49 +197,73 @@
 // --------------------------------
 .drawer-btn{
   display: block;
-  position: fixed;
-  top: 30px;
-  right: 4vw;
+  position: relative;
   transition: all .4s;
   width: 38px;
-  height: 20px;
+  height: 24px;
   z-index: 100;
   padding: 0;
-  border:none;
+  transform: translateY(-8px);
+  margin-left: auto;
   @include mq('pc'){
     display: none;
   }
-  @include mq('sp'){
-    top: 20px;
+  &:focus{
+    outline: none;
   }
-  .bar{
+  // ハンバーガーボタン下のMenuとCloseのスタイル
+  .drawer-text{
+    width: 100%;
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    text-align: center;
+    font-size: 11px;
+  }
+  .drawer-close{
+    display: none;
+  }
+  // スクリーンリーダー用テキスト
+  .drawer-visuallyHidden{
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+}
+// ３本線
+.bar{
+  display: block;
+  transition: all .4s;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: currentColor;
+  &::before, &::after{
     display: block;
-    transition: all .4s;
+    content: "";
     position: absolute;
     width: 100%;
     height: 2px;
-    background: $txtd;
-    &:nth-of-type(1){
-      top: 0;
-    }
-    &:nth-of-type(2){
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    &:nth-of-type(3){
-      bottom: 0;
-    }
+    background-color: currentColor;
+    transition: all .4s;
   }
-  .drawer_text {
-    width: 100%;
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    text-align: center;
-    font-size: 10px;
-    letter-spacing: .08em;
+  &::before{
+    top: -9px;
+  }
+  &::after{
+    top: 9px;
   }
 }
+
 
 // ----------------------------------------------------------------
 //              ハンバーガーボタンjsで変更される箇所
@@ -259,28 +283,26 @@
   background-color:rgba(51,51,51,.85);
   z-index: 20;
 }
-.drawer-btn.is-active .bar:nth-of-type(1){
-  transform: translateY(9px) rotate(-315deg);
-  background-color: $txtw;
+.drawer-btn.is-active .bar{
+  background-color: transparent;
+  &::before{
+    background-color: $txtw;
+    transform: translateY(9px) rotate(-315deg);
+  }
+  &::after{
+    background-color: $txtw;
+    transform: translateY(-9px) rotate(315deg);
+  }
 }
-.drawer-btn.is-active .bar:nth-of-type(2){
-  opacity: 0;
-}
-.drawer-btn.is-active .bar:nth-of-type(3){
-  transform: translateY(-9px) rotate(315deg);
-  background-color: $txtw;
-}
-.drawer_menu_text.is-active {
+.drawer-menuText.is-active{
   display: none;
 }
-.js-drawer_close.is-active {
-  display: block;
+// デフォルトよりネストが浅いのでimportantを付与
+.drawer-close.is-active{
+  display: block !important;
   color: $txtw;
 }
-.js-drawer_close {
-  display: none;
-}
-body.noScroll {
+body.noScroll{
   overflow: hidden;
 }
 

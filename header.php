@@ -29,11 +29,10 @@
         );
       ?>
       <button type="button" class="drawer-btn">
-        <span class="bar bar-top"></span>
-        <span class="bar bar-mid"></span>
-        <span class="bar bar-bottom"></span>
-        <span class="drawer_menu_text drawer_text">Menu</span>
-        <span class="js-drawer_close drawer_text">Close</span>
+        <span class="bar"></span><!-- /.bar -->
+        <span class="drawer-menuText drawer-text">Menu</span><!-- /.drawer-menuText -->
+        <span class="drawer-close drawer-text">Close</span><!-- /.drawer-close-->
+        <span class="drawer-visuallyHidden">メニューを開閉する</span><!-- /.drawer-visuallyHidden -->
       </button><!-- /.drawer-btn -->
       <span class="header-musk"></span>
     </div><!-- /.header-inner -->
