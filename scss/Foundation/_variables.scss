@@ -37,26 +37,23 @@ $breakpoints: (
   transform: translate(-50%, -50%);
 }
 
-// 背景
-$bgc: #fff;
-
 // フッター背景色
-$bgc-d: #1a1a1a;
+$color-dark: #1A1A1A;
 
 // テキスト色
-$txtd: #333;
-$txtw: #fff;
-$txty: #F4D102;
+$color-dark: #333;
+$color-bright: #FFF;
+$color-yellow: #F4D102;
 
 // ボタンカラー
-$btn-contact: #421F15;
-$btn-base: #C63205;
+$color-contactBtn: #421F15;
+$color-baseBtn: #C63205;
 
 // フォントスタイル
 $ff-futura: 'futura-pt', sans-serif;
 $ff-gothic: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo',sans-serif;
 $ff-base: $ff-gothic;
-$fz-base: 16px;
+$fz-base: 1.6rem;
 $fw-base: 300;
 $fw-w6: 600;
 $lh-base: division(26, 16);

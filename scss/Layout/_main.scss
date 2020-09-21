@@ -9,18 +9,18 @@
 .section-head{
   font-family: $ff-futura;
   font-weight: $fw-w6;
-  font-size: 43px;
+  font-size: 4.3rem;
   line-height: division(66, 43);
   text-align: center;
   @include mq('sp'){
-    font-size: 32px;
+    font-size: 3.2rem;
   }
 }
 
 // パンくずリスト
 .breadcrumbs{
   max-width: $layout-width-inner;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: $fw-w6;
   line-height: division(21, 12);
   margin: 31px auto 0 auto;
@@ -51,7 +51,7 @@
 
 // 記事の日時
 .article-time{
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: division(21, 12);
 }
 
@@ -70,7 +70,7 @@
     .schedule-item{
       display: flex;
       justify-content: center;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: $fw-w6;
       &:not(:last-of-type){
         margin-bottom: 25px;
@@ -80,7 +80,7 @@
       }
     }
     .schedule-time{
-      font-size: 20px;
+      font-size: 2rem;
       margin-right: 13px;
     }
     .start-time{
@@ -94,7 +94,7 @@
     }
     .ticket-link{
       display: block;
-      border-bottom: 1px solid $txtd;
+      border-bottom: 1px solid $color-dark;
       @include mq('sp'){
         margin-right: 30px;
       }
@@ -192,10 +192,10 @@
     }
     .announcement{
       max-width: 340px;
-      font-size: 14px;
+      font-size: 1.4rem;
       text-align: justify;
       line-height: division(22, 14);
-      color: $txtw;
+      color: $color-bright;
       @include mq('tab'){
         max-width: vw($layout-width-inner, 340px);
       }
@@ -230,13 +230,13 @@
     .asc{
       text-align: center;
       margin-bottom: 19px;
-      font-size: 34px;
+      font-size: 3.4rem;
       font-weight: $fw-w6;
       @include mq('tab'){
         text-align: right;
       }
       @include mq('sp'){
-        font-size: 20px;
+        font-size: 2rem;
         text-align: justify;
       }
     }
@@ -253,7 +253,7 @@
       }
     }
     .synopsis-text{
-      font-size: 12px;
+      font-size: 1.2rem;
       line-height: division(21, 12);
       @include mq('tab'){
         &:first-of-type{
@@ -297,7 +297,7 @@
     }
     .contents-item{
       display: block;
-      background-color: $bgc;
+      background-color: $color-bright;
       max-width: 250px;
       height: 260px;
       @include mq('tab'){
@@ -348,6 +348,9 @@
         line-height: 1;
         font-weight: $fw-w6;
       }
+      .news-head{
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -358,7 +361,7 @@
     background-size: cover;
     background-position: 0px 0px;
     height: 420px;
-    color: $txtw;
+    color: $color-bright;
     margin: 30px 0;
     @include mq('tab'){
       background-position: -140px 0px;
@@ -374,7 +377,7 @@
     .story{
       width: 39.5%;
       margin-left: auto;
-      font-size: 12px;
+      font-size: 1.2rem;
       line-height: division(21, 12);
       @include mq('tab'){
         width: 50%;
@@ -397,14 +400,14 @@
     .comment-read{
       margin-bottom: 33px;
       text-align: center;
-      font-size: 24px;
+      font-size: 2.4rem;
       font-weight: $fw-w6;
       line-height: 1;
       @include mq('sp'){
         padding-left: 4vw;
         padding-right: 4vw;
         line-height: $lh-base;
-        font-size: 20px;
+        font-size: 2rem;
         text-align: justify;
       }
     }
@@ -412,7 +415,7 @@
       background-image: url(../images/director.jpg);
       background-repeat: no-repeat;
       background-position: 0 -60px;
-      color: $txtw;
+      color: $color-bright;
       padding: 44px 30px 43px 30px;
       position: relative;
       @include mq('sp'){
@@ -423,7 +426,7 @@
       }
     }
     .director{
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: $fw-w6;
       line-height: division(42.87, 20);
       br{
@@ -434,11 +437,11 @@
       }
     }
     .director-name{
-      font-size: 26px;
+      font-size: 2.6rem;
       line-height: division(42.87, 26);
     }
     .director-message{
-      font-size: 14px;
+      font-size: 1.4rem;
       line-height: division(22, 14);
       @include mq('sp'){
         width: 100%;
@@ -469,7 +472,7 @@
     &::after{
       content: "";
       display: block;
-      background-color: $bgc;
+      background-color: $color-bright;
       width: 100%;
       height: 670px;
       position: absolute;
@@ -537,13 +540,13 @@
         line-height: division(30, 18);
       }
       .profession{
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: division(30, 12);
         padding-bottom: 15px;
       }
       .cast-career{
         text-align: justify;
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: division(21, 12);
       }
     }
@@ -626,7 +629,7 @@
     }
     .content-item{
       display: block;
-      background-color: $bgc;
+      background-color: $color-bright;
       max-width: 250px;
       height: 260px;
       .news-img img{
@@ -639,18 +642,22 @@
         line-height: 1;
         font-weight: $fw-w6;
       }
+      .news-head{
+        font-size: 1.8rem;
+      }
     }
     // 前後記事ページネーション
     .pagenation{
       display: flex;
       justify-content: center;
+      font-size: 1.4rem;
     }
     .page-numbers{
       display: block;
       width: 27px;
       height: 27px;
       text-align: center;
-      border: 2px solid $bgc-d;
+      border: 2px solid $color-dark;
       margin-right: 9px;
     }
     .fa-chevron-left{
@@ -658,8 +665,8 @@
       &::before{
         display: block;
         position: absolute;
-        top: -13px;
-        left: -4px;
+        top: -10px;
+        left: -3px;
       }
     }
     .fa-chevron-right{
@@ -667,13 +674,13 @@
       &::before{
         display: block;
         position: absolute;
-        top: -13px;
-        left: -4px;
+        top: -10px;
+        left: -3px;
       }
     }
     .current{
-      color: $txty;
-      background-color: $bgc-d;
+      color: $color-bright;
+      background-color: $color-dark;
     }
   }
 
@@ -761,39 +768,40 @@
       }
     }
     .title-wrap{
-      background-color: $bgc-d;
-      color: $txtw;
+      background-color: $color-dark;
+      color: $color-bright;
       height: 76px;
       padding: 0 30px;
       @include mq('sp'){
         height: auto;
       }
       .article-title{
-        font-size: 26px;
+        font-size: 2.6rem;
         font-weight: $fw-w6;
         @include mq('sp'){
-          font-size: 20px;
+          font-size: 2rem;
         }
       }
     }
     .article-text{
-      background-color: $bgc;
+      background-color: $color-bright;
       padding: 30px 30px 25px 30px;
       text-align: justify;
       strong{
-        font-size: 22px;
+        font-size: 2.2rem;
         font-weight: $fw-w6;
         line-height: division(26, 22);
         @include mq('sp'){
-          font-size: 18px;
+          font-size: 1.8rem;
         }
       }
       h4{
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: $fw-w6;
         line-height: division(26, 18);
       }
       p{
+        font-size: 1.6rem;
         line-height: division(26, 16);
       }
     }
@@ -910,7 +918,7 @@
       position: absolute;
       top: 215px;
       left: 165px;
-      color: $txtw;
+      color: $color-bright;
       @include mq('tab'){
         top: vw(810, 215);
         left: 2vw;
@@ -927,7 +935,7 @@
       padding: 0;
     }
     .section-content{
-      color: $txtw;
+      color: $color-bright;
       padding: 0;
     }
     .section-head{
@@ -941,7 +949,7 @@
       top: 0;
       right: -350px;
       max-width: 390px;
-      font-size: 12px;
+      font-size: 1.2rem;
       line-height: division(22, 12);
       @include mq('tab'){
         position: static;
@@ -1009,7 +1017,7 @@
       background-color: rgba(0,0,0,.4);
     }
     .section-content{
-      color: $txtw;
+      color: $color-bright;
     }
     .section-contents{
       @include mq('sp'){
@@ -1019,7 +1027,7 @@
     }
     .contents-text{
       max-width: 390px;
-      font-size: 12px;
+      font-size: 1.2rem;
       line-height: division(21, 12);
       position: absolute;
       top: 50%;
@@ -1060,7 +1068,7 @@
       background-color: rgba(0,0,0,.4);
     }
     .section-content{
-      color: $txtw;
+      color: $color-bright;
     }
     .section-contents{
       @include mq('sp'){
@@ -1070,7 +1078,7 @@
     }
     .contents-text{
       max-width: 390px;
-      font-size: 12px;
+      font-size: 1.2rem;
       line-height: division(21, 12);
       position: absolute;
       top: 50%;
@@ -1116,7 +1124,7 @@
       background-color: rgba(0,0,0,.4);
     }
     .section-content{
-      color: $txtw;
+      color: $color-bright;
     }
     .section-contents{
       @include mq('sp'){
@@ -1126,7 +1134,7 @@
     }
     .contents-text{
       max-width: 390px;
-      font-size: 12px;
+      font-size: 1.2rem;
       line-height: division(21, 12);
       position: absolute;
       top: 50%;
@@ -1215,14 +1223,14 @@
     .comment-read{
       margin-bottom: 33px;
       text-align: center;
-      font-size: 24px;
+      font-size: 2.4rem;
       font-weight: $fw-w6;
       line-height: 1;
       @include mq('sp'){
         padding-left: 4vw;
         padding-right: 4vw;
         line-height: $lh-base;
-        font-size: 20px;
+        font-size: 2rem;
         text-align: justify;
       }
     }
@@ -1230,7 +1238,7 @@
       background-image: url(../images/director.jpg);
       background-repeat: no-repeat;
       background-position: 0 -60px;
-      color: $txtw;
+      color: $color-bright;
       padding: 44px 30px 43px 30px;
       position: relative;
       @include mq('sp'){
@@ -1241,7 +1249,7 @@
       }
     }
     .director{
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: $fw-w6;
       line-height: division(42.87, 20);
       br{
@@ -1252,11 +1260,11 @@
       }
     }
     .director-name{
-      font-size: 26px;
+      font-size: 2.6rem;
       line-height: division(42.87, 26);
     }
     .director-message{
-      font-size: 14px;
+      font-size: 1.4rem;
       line-height: division(22, 14);
       @include mq('sp'){
         width: 100%;
@@ -1283,19 +1291,20 @@
     .comment-item{
       height: 241px;
       .comment-item-name{
-        font-size: 22px;
+        font-size: 2.2rem;
         font-weight: $fw-w6;
         line-height: 1;
         margin-bottom: 10px;
         text-align: center;
       }
       .profession{
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: 1;
         margin-bottom: 14.4px;
         text-align: center;
       }
       .comment-message{
+        font-size: 1.6rem;
         line-height: division(26, 16);
       }
     }
@@ -1366,7 +1375,7 @@
     &::after{
       content: "";
       display: block;
-      background-color: $bgc;
+      background-color: $color-bright;
       width: 100%;
       height: 670px;
       position: absolute;
@@ -1427,20 +1436,22 @@
         }
       }
       .cast-role{
+        font-size: 1.6rem;
         line-height: division(30, 16);
       }
       .cast-name{
+        font-size: 1.8rem;
         font-weight: $fw-w6;
         line-height: division(30, 18);
       }
       .profession{
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: division(30, 12);
         padding-bottom: 15px;
       }
       .cast-career{
         text-align: justify;
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: division(21, 12);
       }
     }
@@ -1483,15 +1494,15 @@
         max-width: 203.3px;
       }
       .cast-role{
-        font-size: 17px;
+        font-size: 1.7rem;
       }
       .cast-name{
-        font-size: 23px;
+        font-size: 2.3rem;
         font-weight: $fw-w6;
         line-height: division(30, 23);
       }
       .profession{
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: division(30, 12);
         padding-bottom: 15px;
         @include mq('sp'){
@@ -1500,7 +1511,7 @@
       }
       .cast-career{
         text-align: justify;
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: division(21, 12);
       }
     }
@@ -1508,7 +1519,7 @@
 
   // キャストセクション３
   .section:nth-of-type(3){
-    background-color: $bgc;
+    background-color: $color-bright;
     .section-content{
       padding: 80px 0 10px 0;
     }
@@ -1525,15 +1536,15 @@
     .cast-item{
       text-align: center;
       .cast-role{
-        font-size: 17px;
+        font-size: 1.7rem;
       }
       .cast-name{
-        font-size: 23px;
+        font-size: 2.3rem;
         font-weight: $fw-w6;
         line-height: division(30, 23);
       }
       .profession{
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: division(30, 12);
         padding-bottom: 15px;
         @include mq('sp'){
@@ -1614,7 +1625,7 @@
       }
     }
     .inguiry-read{
-      font-size: 18px;
+      font-size: 1.8rem;
       font-weight: $fw-w6;
       line-height: division(30, 18);
       margin-bottom: 20px;
@@ -1638,7 +1649,7 @@
       }
     }
     .form-item-title{
-      font-size: 18px;
+      font-size: 1.8rem;
       font-weight: $fw-w6;
       line-height: division(30, 18);
       margin-right: 16px;
@@ -1652,7 +1663,7 @@
       width: 520px;
       background-color: rgba(255,255,255,.7);
       padding: 5px;
-      font-size: 18px;
+      font-size: 1.8rem;
       @include mq('sp'){
         width: 100%;
       }
@@ -1742,7 +1753,7 @@
       }
     }
     .confilm-read{
-      font-size: 18px;
+      font-size: 1.8rem;
       font-weight: $fw-w6;
       line-height: division(30, 18);
       @include mq('sp'){
@@ -1777,7 +1788,7 @@
     }
     .contents-item{
       display: block;
-      background-color: $bgc;
+      background-color: $color-bright;
       max-width: 250px;
       height: 260px;
       @include mq('tab'){
@@ -1827,6 +1838,9 @@
         margin: 14px;
         line-height: 1;
         font-weight: $fw-w6;
+      }
+      .news-head{
+        font-size: 1.8rem;
       }
     }
   }

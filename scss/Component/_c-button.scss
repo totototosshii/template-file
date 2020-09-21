@@ -3,8 +3,8 @@
 // --------------------------------
 .btn{
   display: block;
-  background-color: $btn-base;
-  color: $txtw;
+  background-color: $color-baseBtn;
+  color: $color-bright;
   font-weight: $fw-w6;
   text-align: center;
 }
@@ -15,14 +15,14 @@
 // --------------------------------
 .more-btn{
   line-height: 36.5px;
-  font-size: 14px;
+  font-size: 1.4rem;
   max-width: 116px;
   height: 36.5px;
   padding: 0 16px;
   margin-left: auto;
   @include mq('sp'){
     margin: auto;
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 }
 
@@ -33,20 +33,20 @@
 .cast-more-btn{
   display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: $fw-w6;
-  color: $btn-base;
-  border: 5px solid $btn-base;
+  color: $color-baseBtn;
+  border: 5px solid $color-baseBtn;
   max-width: 116px;
   height: 45px;
   line-height: 35px;
   margin: 0 auto;
   @include mq('sp'){
-    font-size: 13px;
+    font-size: 1.3rem;
   }
   &:hover{
-    background-color: $btn-base;
-    color: $txtw;
+    background-color: $color-baseBtn;
+    color: $color-bright;
   }
 }
 
@@ -56,7 +56,7 @@
 // --------------------------------
 .news-btn{
   line-height: 40px;
-  font-size: 14px;
+  font-size: 1.4rem;
   max-width: 121px;
   height: 40px;
   padding: 0 12px;
@@ -69,7 +69,7 @@
   @include mq('sp'){
     position: static;
     margin: auto;
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 }
 
@@ -78,8 +78,8 @@
 //          お問い合わせ
 // --------------------------------
 .contact-btn{
-  background-color: $btn-contact;
-  font-size: 13px;
+  background-color: $color-contactBtn;
+  font-size: 1.3rem;
   max-width: 193px;
   height: 60px;
   line-height: 60px;
@@ -96,7 +96,7 @@
 //          チケット予約
 // --------------------------------
 .ticket-btn{
-  font-size: 13px;
+  font-size: 1.3rem;
   max-width: 193px;
   height: 60px;
   line-height: 60px;
@@ -113,7 +113,7 @@
 // ----------------------------------------------------------------
 .topPage-ticket-btn{
   line-height: 60px;
-  font-size: 14px;
+  font-size: 1.4rem;
   min-width: 200px;
   height: 60px;
   padding: 0 30px;
@@ -137,7 +137,7 @@
 // ----------------------------------------------------------------
 .underlayer-ticket-btn{
   line-height: division(22, 12);
-  font-size: 12px;
+  font-size: 1.2rem;
   max-width: 150px;
   padding: 14px 15px;
   position: absolute;
@@ -159,7 +159,7 @@
 // --------------------------------
 .submit-btn{
   max-width: 200px;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: $fw-w6;
   line-height: division(22, 18);
   padding: 21px 82px;
@@ -174,12 +174,12 @@
 // Contact Form 7導入時に.btnと.submit-btnのスタイルを統合してクラス名→.wpcf7-submitに書き換えて配色に!importantを付け加える
 .wpcf7-submit{
   display: block;
-  background-color: $btn-base !important;
-  color: $txtw !important;
+  background-color: $color-baseBtn !important;
+  color: $color-bright !important;
   font-weight: $fw-w6;
   text-align: center;
   max-width: 200px;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: $fw-w6;
   line-height: division(22, 18);
   padding: 21px 82px;
@@ -218,7 +218,7 @@
     bottom: -22px;
     left: 0;
     text-align: center;
-    font-size: 11px;
+    font-size: 1.1rem;
   }
   .drawer-close{
     display: none;
@@ -286,11 +286,11 @@
 .drawer-btn.is-active .bar{
   background-color: transparent;
   &::before{
-    background-color: $txtw;
+    background-color: $color-bright;
     transform: translateY(9px) rotate(-315deg);
   }
   &::after{
-    background-color: $txtw;
+    background-color: $color-bright;
     transform: translateY(-9px) rotate(315deg);
   }
 }
@@ -300,7 +300,7 @@
 // デフォルトよりネストが浅いのでimportantを付与
 .drawer-close.is-active{
   display: block !important;
-  color: $txtw;
+  color: $color-bright;
 }
 body.noScroll{
   overflow: hidden;
@@ -317,7 +317,7 @@ body.noScroll{
   width: 50px;
   height: 50px;
   background-image: url(../images/scroll-top.png);
-  border: 2px solid $bgc-d;
+  border: 2px solid $color-dark;
   display: none;
   &:hover, &:focus {
     transform: translateY(-7px);
@@ -328,7 +328,7 @@ body.noScroll{
     position: absolute;
     top: 50%;
     left: 50%;
-    color: $bgc-d;
+    color: $color-dark;
     transform: translate(-50%, -50%);
   }
 }

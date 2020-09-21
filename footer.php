@@ -4,7 +4,7 @@
   </footer>
 
   <!-- スクロールトップボタン -->
-  <button type="button" id="scrollTop" class="scrollTop"><i class="fas fa-chevron-up fa-lg"></i></button>
+  <button type="button" id="scrollTop" class="scrollTop"><i class="fas fa-chevron-up fa-2x"></i></button>
 
 <?php wp_footer(); ?>
 </body><!-- /.top-page -->

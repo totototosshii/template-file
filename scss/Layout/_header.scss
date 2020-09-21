@@ -62,14 +62,14 @@
         font-weight: $fw-w6;
         @include mq('tab'){
           vertical-align: bottom;
-          color: $txtw;
+          color: $color-bright;
           align-items: center;
           text-align: left;
           margin-bottom: 32px;
         }
         @include mq('sp'){
           vertical-align: bottom;
-          color: $txtw;
+          color: $color-bright;
           align-items: center;
           text-align: left;
           margin-bottom: 20px;
@@ -78,15 +78,15 @@
           display: block;
           font-size: 12px;
           @include mq('tab'){
-            font-size: 18px;
+            font-size: 1.8rem;
           }
           @include mq('sp'){
-            font-size: 16px;
+            font-size: 1.6rem;
           }
           &::after{
             display: block;
             text-transform: uppercase;
-            font-size: 22px;
+            font-size: 2.2rem;
             @include mq('tab'){
               display: none;
             }

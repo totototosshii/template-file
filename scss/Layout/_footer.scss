@@ -1,11 +1,21 @@
 .footer{
   height: 80px;
-  background-color: $bgc-d;
+  background-color: $color-dark;
   text-align: center;
-  padding-top: 25px;
+  @include mq('sp'){
+    position: relative;
+  }
 }
 .copy{
-  font-size: 12px;
-  color: $txtw;
-  line-height: 1;
+  font-size: 1.2rem;
+  color: $color-bright;
+  line-height: 80px;
+  @include mq('sp'){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 230px;
+    line-height: 1.5;
+  }
 }

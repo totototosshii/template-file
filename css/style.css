@@ -473,6 +473,10 @@ template {
   display: none;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", "Meiryo", sans-serif;
   font-weight: 300;
@@ -635,7 +639,7 @@ a:hover {
 @media (min-width: 768px) and (max-width: 839px) {
   .header .header-nav .header-list li {
     vertical-align: bottom;
-    color: #fff;
+    color: #FFF;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -647,7 +651,7 @@ a:hover {
 @media (max-width: 767px) {
   .header .header-nav .header-list li {
     vertical-align: bottom;
-    color: #fff;
+    color: #FFF;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -663,20 +667,20 @@ a:hover {
 
 @media (min-width: 768px) and (max-width: 839px) {
   .header .header-nav .header-list li a {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 767px) {
   .header .header-nav .header-list li a {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
 
 .header .header-nav .header-list li a::after {
   display: block;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 2.2rem;
 }
 
 @media (min-width: 768px) and (max-width: 839px) {
@@ -726,20 +730,20 @@ a:hover {
 .section-head {
   font-family: "futura-pt", sans-serif;
   font-weight: 600;
-  font-size: 43px;
+  font-size: 4.3rem;
   line-height: 1.53488;
   text-align: center;
 }
 
 @media (max-width: 767px) {
   .section-head {
-    font-size: 32px;
+    font-size: 3.2rem;
   }
 }
 
 .breadcrumbs {
   max-width: 840px;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.75;
   margin: 31px auto 0 auto;
@@ -785,7 +789,7 @@ a:hover {
 }
 
 .article-time {
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.75;
 }
 
@@ -811,7 +815,7 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
 }
 
@@ -827,7 +831,7 @@ a:hover {
 }
 
 .section:last-of-type .schedule-time {
-  font-size: 20px;
+  font-size: 2rem;
   margin-right: 13px;
 }
 
@@ -1000,10 +1004,10 @@ a:hover {
 
 .top-page .fv .announcement {
   max-width: 340px;
-  font-size: 14px;
+  font-size: 1.4rem;
   text-align: justify;
   line-height: 1.57143;
-  color: #fff;
+  color: #FFF;
 }
 
 @media (min-width: 768px) and (max-width: 839px) {
@@ -1052,7 +1056,7 @@ a:hover {
 .top-page .section:first-of-type .asc {
   text-align: center;
   margin-bottom: 19px;
-  font-size: 34px;
+  font-size: 3.4rem;
   font-weight: 600;
 }
 
@@ -1064,7 +1068,7 @@ a:hover {
 
 @media (max-width: 767px) {
   .top-page .section:first-of-type .asc {
-    font-size: 20px;
+    font-size: 2rem;
     text-align: justify;
   }
 }
@@ -1103,7 +1107,7 @@ a:hover {
 }
 
 .top-page .section:first-of-type .synopsis-text {
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.75;
 }
 
@@ -1162,7 +1166,7 @@ a:hover {
 
 .top-page .section:nth-of-type(2) .contents-item {
   display: block;
-  background-color: #fff;
+  background-color: #FFF;
   max-width: 250px;
   height: 260px;
 }
@@ -1242,13 +1246,17 @@ a:hover {
   font-weight: 600;
 }
 
+.top-page .section:nth-of-type(2) .contents-item .news-head {
+  font-size: 1.8rem;
+}
+
 .top-page .section:nth-of-type(3) {
   background-image: url(../images/story-bgi.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0px 0px;
   height: 420px;
-  color: #fff;
+  color: #FFF;
   margin: 30px 0;
 }
 
@@ -1273,7 +1281,7 @@ a:hover {
 .top-page .section:nth-of-type(3) .story {
   width: 39.5%;
   margin-left: auto;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.75;
 }
 
@@ -1300,7 +1308,7 @@ a:hover {
 .top-page .section:nth-of-type(4) .comment-read {
   margin-bottom: 33px;
   text-align: center;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 1;
 }
@@ -1310,7 +1318,7 @@ a:hover {
     padding-left: 4vw;
     padding-right: 4vw;
     line-height: 1.625;
-    font-size: 20px;
+    font-size: 2rem;
     text-align: justify;
   }
 }
@@ -1319,7 +1327,7 @@ a:hover {
   background-image: url(../images/director.jpg);
   background-repeat: no-repeat;
   background-position: 0 -60px;
-  color: #fff;
+  color: #FFF;
   padding: 44px 30px 43px 30px;
   position: relative;
 }
@@ -1334,7 +1342,7 @@ a:hover {
 }
 
 .top-page .section:nth-of-type(4) .director {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 2.1435;
 }
@@ -1350,12 +1358,12 @@ a:hover {
 }
 
 .top-page .section:nth-of-type(4) .director-name {
-  font-size: 26px;
+  font-size: 2.6rem;
   line-height: 1.64885;
 }
 
 .top-page .section:nth-of-type(4) .director-message {
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.57143;
 }
 
@@ -1396,7 +1404,7 @@ a:hover {
 .top-page .section:nth-of-type(5)::after {
   content: "";
   display: block;
-  background-color: #fff;
+  background-color: #FFF;
   width: 100%;
   height: 670px;
   position: absolute;
@@ -1503,14 +1511,14 @@ a:hover {
 }
 
 .top-page .section:nth-of-type(5) .cast-item .profession {
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 2.5;
   padding-bottom: 15px;
 }
 
 .top-page .section:nth-of-type(5) .cast-item .cast-career {
   text-align: justify;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.75;
 }
 
@@ -1612,7 +1620,7 @@ a:hover {
 
 .archive .section:first-of-type .content-item {
   display: block;
-  background-color: #fff;
+  background-color: #FFF;
   max-width: 250px;
   height: 260px;
 }
@@ -1630,6 +1638,10 @@ a:hover {
   font-weight: 600;
 }
 
+.archive .section:first-of-type .content-item .news-head {
+  font-size: 1.8rem;
+}
+
 .archive .section:first-of-type .pagenation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1637,6 +1649,7 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 1.4rem;
 }
 
 .archive .section:first-of-type .page-numbers {
@@ -1644,7 +1657,7 @@ a:hover {
   width: 27px;
   height: 27px;
   text-align: center;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #333;
   margin-right: 9px;
 }
 
@@ -1655,8 +1668,8 @@ a:hover {
 .archive .section:first-of-type .fa-chevron-left::before {
   display: block;
   position: absolute;
-  top: -13px;
-  left: -4px;
+  top: -10px;
+  left: -3px;
 }
 
 .archive .section:first-of-type .fa-chevron-right {
@@ -1666,13 +1679,13 @@ a:hover {
 .archive .section:first-of-type .fa-chevron-right::before {
   display: block;
   position: absolute;
-  top: -13px;
-  left: -4px;
+  top: -10px;
+  left: -3px;
 }
 
 .archive .section:first-of-type .current {
-  color: #F4D102;
-  background-color: #1a1a1a;
+  color: #FFF;
+  background-color: #333;
 }
 
 .single .fv {
@@ -1786,8 +1799,8 @@ a:hover {
 }
 
 .single .section:first-of-type .title-wrap {
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #333;
+  color: #FFF;
   height: 76px;
   padding: 0 30px;
 }
@@ -1799,41 +1812,42 @@ a:hover {
 }
 
 .single .section:first-of-type .title-wrap .article-title {
-  font-size: 26px;
+  font-size: 2.6rem;
   font-weight: 600;
 }
 
 @media (max-width: 767px) {
   .single .section:first-of-type .title-wrap .article-title {
-    font-size: 20px;
+    font-size: 2rem;
   }
 }
 
 .single .section:first-of-type .article-text {
-  background-color: #fff;
+  background-color: #FFF;
   padding: 30px 30px 25px 30px;
   text-align: justify;
 }
 
 .single .section:first-of-type .article-text strong {
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 600;
   line-height: 1.18182;
 }
 
 @media (max-width: 767px) {
   .single .section:first-of-type .article-text strong {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
 
 .single .section:first-of-type .article-text h4 {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.44444;
 }
 
 .single .section:first-of-type .article-text p {
+  font-size: 1.6rem;
   line-height: 1.625;
 }
 
@@ -1964,7 +1978,7 @@ a:hover {
   position: absolute;
   top: 215px;
   left: 165px;
-  color: #fff;
+  color: #FFF;
 }
 
 @media (min-width: 768px) and (max-width: 839px) {
@@ -1991,7 +2005,7 @@ a:hover {
 }
 
 .story .l-section .section-content {
-  color: #fff;
+  color: #FFF;
   padding: 0;
 }
 
@@ -2008,7 +2022,7 @@ a:hover {
   top: 0;
   right: -350px;
   max-width: 390px;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.83333;
 }
 
@@ -2111,7 +2125,7 @@ a:hover {
 }
 
 .story .section:first-of-type .section-content {
-  color: #fff;
+  color: #FFF;
 }
 
 @media (max-width: 767px) {
@@ -2128,7 +2142,7 @@ a:hover {
 
 .story .section:first-of-type .contents-text {
   max-width: 390px;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.75;
   position: absolute;
   top: 50%;
@@ -2181,7 +2195,7 @@ a:hover {
 }
 
 .story .section:nth-of-type(2) .section-content {
-  color: #fff;
+  color: #FFF;
 }
 
 @media (max-width: 767px) {
@@ -2198,7 +2212,7 @@ a:hover {
 
 .story .section:nth-of-type(2) .contents-text {
   max-width: 390px;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.75;
   position: absolute;
   top: 50%;
@@ -2263,7 +2277,7 @@ a:hover {
 }
 
 .story .section:nth-of-type(3) .section-content {
-  color: #fff;
+  color: #FFF;
 }
 
 @media (max-width: 767px) {
@@ -2280,7 +2294,7 @@ a:hover {
 
 .story .section:nth-of-type(3) .contents-text {
   max-width: 390px;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.75;
   position: absolute;
   top: 50%;
@@ -2398,7 +2412,7 @@ a:hover {
 .comments .section:first-of-type .comment-read {
   margin-bottom: 33px;
   text-align: center;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 1;
 }
@@ -2408,7 +2422,7 @@ a:hover {
     padding-left: 4vw;
     padding-right: 4vw;
     line-height: 1.625;
-    font-size: 20px;
+    font-size: 2rem;
     text-align: justify;
   }
 }
@@ -2417,7 +2431,7 @@ a:hover {
   background-image: url(../images/director.jpg);
   background-repeat: no-repeat;
   background-position: 0 -60px;
-  color: #fff;
+  color: #FFF;
   padding: 44px 30px 43px 30px;
   position: relative;
 }
@@ -2432,7 +2446,7 @@ a:hover {
 }
 
 .comments .section:first-of-type .director {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 2.1435;
 }
@@ -2448,12 +2462,12 @@ a:hover {
 }
 
 .comments .section:first-of-type .director-name {
-  font-size: 26px;
+  font-size: 2.6rem;
   line-height: 1.64885;
 }
 
 .comments .section:first-of-type .director-message {
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.57143;
 }
 
@@ -2490,7 +2504,7 @@ a:hover {
 }
 
 .comments .section:nth-of-type(2) .comment-item .comment-item-name {
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 600;
   line-height: 1;
   margin-bottom: 10px;
@@ -2498,13 +2512,14 @@ a:hover {
 }
 
 .comments .section:nth-of-type(2) .comment-item .profession {
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1;
   margin-bottom: 14.4px;
   text-align: center;
 }
 
 .comments .section:nth-of-type(2) .comment-item .comment-message {
+  font-size: 1.6rem;
   line-height: 1.625;
 }
 
@@ -2597,7 +2612,7 @@ a:hover {
 .cast .section:first-of-type::after {
   content: "";
   display: block;
-  background-color: #fff;
+  background-color: #FFF;
   width: 100%;
   height: 670px;
   position: absolute;
@@ -2695,23 +2710,25 @@ a:hover {
 }
 
 .cast .section:first-of-type .cast-item .cast-role {
+  font-size: 1.6rem;
   line-height: 1.875;
 }
 
 .cast .section:first-of-type .cast-item .cast-name {
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.66667;
 }
 
 .cast .section:first-of-type .cast-item .profession {
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 2.5;
   padding-bottom: 15px;
 }
 
 .cast .section:first-of-type .cast-item .cast-career {
   text-align: justify;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.75;
 }
 
@@ -2775,17 +2792,17 @@ a:hover {
 }
 
 .cast .section:nth-of-type(2) .cast-item .cast-role {
-  font-size: 17px;
+  font-size: 1.7rem;
 }
 
 .cast .section:nth-of-type(2) .cast-item .cast-name {
-  font-size: 23px;
+  font-size: 2.3rem;
   font-weight: 600;
   line-height: 1.30435;
 }
 
 .cast .section:nth-of-type(2) .cast-item .profession {
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 2.5;
   padding-bottom: 15px;
 }
@@ -2798,12 +2815,12 @@ a:hover {
 
 .cast .section:nth-of-type(2) .cast-item .cast-career {
   text-align: justify;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 1.75;
 }
 
 .cast .section:nth-of-type(3) {
-  background-color: #fff;
+  background-color: #FFF;
 }
 
 .cast .section:nth-of-type(3) .section-content {
@@ -2833,17 +2850,17 @@ a:hover {
 }
 
 .cast .section:nth-of-type(3) .cast-item .cast-role {
-  font-size: 17px;
+  font-size: 1.7rem;
 }
 
 .cast .section:nth-of-type(3) .cast-item .cast-name {
-  font-size: 23px;
+  font-size: 2.3rem;
   font-weight: 600;
   line-height: 1.30435;
 }
 
 .cast .section:nth-of-type(3) .cast-item .profession {
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 2.5;
   padding-bottom: 15px;
 }
@@ -2951,7 +2968,7 @@ a:hover {
 }
 
 .inguiry .section:first-of-type .inguiry-read {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.66667;
   margin-bottom: 20px;
@@ -2993,7 +3010,7 @@ a:hover {
 }
 
 .inguiry .section:first-of-type .form-item-title {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.66667;
   margin-right: 16px;
@@ -3009,7 +3026,7 @@ a:hover {
   width: 520px;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 5px;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 @media (max-width: 767px) {
@@ -3128,7 +3145,7 @@ a:hover {
 }
 
 .confilm .section:first-of-type .confilm-read {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.66667;
 }
@@ -3179,7 +3196,7 @@ a:hover {
 
 .confilm .section:nth-of-type(2) .contents-item {
   display: block;
-  background-color: #fff;
+  background-color: #FFF;
   max-width: 250px;
   height: 260px;
 }
@@ -3259,30 +3276,52 @@ a:hover {
   font-weight: 600;
 }
 
+.confilm .section:nth-of-type(2) .contents-item .news-head {
+  font-size: 1.8rem;
+}
+
 .footer {
   height: 80px;
-  background-color: #1a1a1a;
+  background-color: #333;
   text-align: center;
-  padding-top: 25px;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    position: relative;
+  }
 }
 
 .copy {
-  font-size: 12px;
-  color: #fff;
-  line-height: 1;
+  font-size: 1.2rem;
+  color: #FFF;
+  line-height: 80px;
+}
+
+@media (max-width: 767px) {
+  .copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 230px;
+    line-height: 1.5;
+  }
 }
 
 .btn {
   display: block;
   background-color: #C63205;
-  color: #fff;
+  color: #FFF;
   font-weight: 600;
   text-align: center;
 }
 
 .more-btn {
   line-height: 36.5px;
-  font-size: 14px;
+  font-size: 1.4rem;
   max-width: 116px;
   height: 36.5px;
   padding: 0 16px;
@@ -3292,14 +3331,14 @@ a:hover {
 @media (max-width: 767px) {
   .more-btn {
     margin: auto;
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 }
 
 .cast-more-btn {
   display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #C63205;
   border: 5px solid #C63205;
@@ -3311,18 +3350,18 @@ a:hover {
 
 @media (max-width: 767px) {
   .cast-more-btn {
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 }
 
 .cast-more-btn:hover {
   background-color: #C63205;
-  color: #fff;
+  color: #FFF;
 }
 
 .news-btn {
   line-height: 40px;
-  font-size: 14px;
+  font-size: 1.4rem;
   max-width: 121px;
   height: 40px;
   padding: 0 12px;
@@ -3341,13 +3380,13 @@ a:hover {
   .news-btn {
     position: static;
     margin: auto;
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 }
 
 .contact-btn {
   background-color: #421F15;
-  font-size: 13px;
+  font-size: 1.3rem;
   max-width: 193px;
   height: 60px;
   line-height: 60px;
@@ -3363,7 +3402,7 @@ a:hover {
 }
 
 .ticket-btn {
-  font-size: 13px;
+  font-size: 1.3rem;
   max-width: 193px;
   height: 60px;
   line-height: 60px;
@@ -3379,7 +3418,7 @@ a:hover {
 
 .topPage-ticket-btn {
   line-height: 60px;
-  font-size: 14px;
+  font-size: 1.4rem;
   min-width: 200px;
   height: 60px;
   padding: 0 30px;
@@ -3407,7 +3446,7 @@ a:hover {
 
 .underlayer-ticket-btn {
   line-height: 1.83333;
-  font-size: 12px;
+  font-size: 1.2rem;
   max-width: 150px;
   padding: 14px 15px;
   position: absolute;
@@ -3433,7 +3472,7 @@ a:hover {
 
 .submit-btn {
   max-width: 200px;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.22222;
   padding: 21px 82px;
@@ -3450,11 +3489,11 @@ a:hover {
 .wpcf7-submit {
   display: block;
   background-color: #C63205 !important;
-  color: #fff !important;
+  color: #FFF !important;
   font-weight: 600;
   text-align: center;
   max-width: 200px;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.22222;
   padding: 21px 82px;
@@ -3499,7 +3538,7 @@ a:hover {
   bottom: -22px;
   left: 0;
   text-align: center;
-  font-size: 11px;
+  font-size: 1.1rem;
 }
 
 .drawer-btn .drawer-close {
@@ -3580,14 +3619,14 @@ a:hover {
 }
 
 .drawer-btn.is-active .bar::before {
-  background-color: #fff;
+  background-color: #FFF;
   -webkit-transform: translateY(9px) rotate(-315deg);
       -ms-transform: translateY(9px) rotate(-315deg);
           transform: translateY(9px) rotate(-315deg);
 }
 
 .drawer-btn.is-active .bar::after {
-  background-color: #fff;
+  background-color: #FFF;
   -webkit-transform: translateY(-9px) rotate(315deg);
       -ms-transform: translateY(-9px) rotate(315deg);
           transform: translateY(-9px) rotate(315deg);
@@ -3599,7 +3638,7 @@ a:hover {
 
 .drawer-close.is-active {
   display: block !important;
-  color: #fff;
+  color: #FFF;
 }
 
 body.noScroll {
@@ -3613,7 +3652,7 @@ body.noScroll {
   width: 50px;
   height: 50px;
   background-image: url(../images/scroll-top.png);
-  border: 2px solid #1a1a1a;
+  border: 2px solid #333;
   display: none;
 }
 
@@ -3631,7 +3670,7 @@ body.noScroll {
   position: absolute;
   top: 50%;
   left: 50%;
-  color: #1a1a1a;
+  color: #333;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
