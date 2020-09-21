@@ -1,6 +1,6 @@
 .footer{
   height: 80px;
-  background-color: $color-dark;
+  background-color: $color-footer;
   text-align: center;
   @include mq('sp'){
     position: relative;

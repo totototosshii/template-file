@@ -27,8 +27,8 @@ $breakpoints: (
   @return $px / ($width - 1) * 100vw;
 }
 
-//mixin
-//position中央寄せ
+// mixin
+// position中央寄せ
 @mixin cc($top:50%, $left:50%) {
   text-align: center;
   position: absolute;
@@ -37,17 +37,12 @@ $breakpoints: (
   transform: translate(-50%, -50%);
 }
 
-// フッター背景色
-$color-dark: #1A1A1A;
-
-// テキスト色
+// カラー
 $color-dark: #333;
 $color-bright: #FFF;
-$color-yellow: #F4D102;
-
-// ボタンカラー
 $color-contactBtn: #421F15;
 $color-baseBtn: #C63205;
+$color-footer: #1A1A1A;
 
 // フォントスタイル
 $ff-futura: 'futura-pt', sans-serif;
