@@ -5,52 +5,71 @@
  * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/add_theme_support
  */
 
-/* テーマのセットアップ */
-function my_setup() {
-  add_theme_support( 'post-thumbnails' );			 /* アイキャッチ */
-  add_theme_support( 'automatic-feed-links' ); /* RSSフィード */
-  add_theme_support( 'title-tag' ); 					 /* タイトルタグ自動生成 */
-  add_theme_support( 'html5', array( 					 /* HTML5のタグで出力 */
-    'search-form',
-    'comment-form',
-    'comment-list',
-    'gallery',
-    'caption',
-  ) );
-  add_theme_support( 'wp-block-styles' );
-  if ( ! isset ($content_width ) ) {					 /* コンテンツの横幅をセット */
-    $content_width = 840;
-	}
-  add_theme_support( 'responsive-embeds' );		 /* 埋め込みコンテンツレスポンシブ */
+/* コンテンツの横幅をセット */
+if ( ! isset ($content_width ) ) {
+  $content_width = 840;
 }
-add_action( 'after_setup_theme', 'my_setup' );
+
+
+/* テーマのセットアップ */
+function my_theme_setup() {
+  // <head>内にRSSフィードリンクを出力
+  add_theme_support( 'automatic-feed-links' );
+  // タイトルタグを自動生成
+  add_theme_support( 'title-tag' );
+  // HTML5のタグで出力
+  add_theme_support( 'html5',
+    array(
+      'search-form',
+      'comment-form',
+      'comment-list',
+      'gallery',
+      'caption'
+    )
+  );
+  // アイキャッチ画像を有効化
+  add_theme_support( 'post-thumbnails' );
+  // ブロックエディター用のCSSを有効化
+  add_theme_support( 'wp-block-styles' );
+  // 埋め込みコンテンツをレスポンシブ対応に
+  add_theme_support( 'responsive-embeds' );
+}
+add_action( 'after_setup_theme', 'my_theme_setup' );
 
 
 /* CSSとJavaScriptの読み込み */
 function my_script_init() {
-	// fontawesome CDN.
-  wp_enqueue_style( 'fontawesome',
-                    'https://use.fontawesome.com/releases/v5.14.0/css/all.css', array(),
-                    '5.14.0',
-                    'all'
-                  );
-  // adobefont CDN
-  wp_enqueue_style( 'adobefont',
-                    'https://use.typekit.net/bff7isf.css'
-                  );
-	// CSS の読み込み.
-  wp_enqueue_style( 'style-css',
-                    get_template_directory_uri() . '/css/style.css', array(),
-                    '1.3.1',
-                    'all'
-                  );
-	// JS の読み込み  jquery を先に読み込む  </body> 終了タグの前に配置.
-  wp_enqueue_script( 'script-js',
-                      get_template_directory_uri() . '/js/main.js',
-                      array( 'jquery' ),
-                      '1.0.5',
-                      true
-                    );
+	// Font Awesome CDN
+  wp_enqueue_style(
+    'fontawesome',
+    'https://use.fontawesome.com/releases/v5.14.0/css/all.css',
+    array(),
+    '5.14.0',
+    'all'
+  );
+  // Adobe Fonts CDN
+  wp_enqueue_style(
+    'adobefont',
+    'https://use.typekit.net/bff7isf.css'
+  );
+	// CSSの読み込み
+  wp_enqueue_style(
+    'style-css',
+    get_template_directory_uri() . '/css/style.css',
+    array(),
+    '1.3.1',
+    'all'
+  );
+	// JavaScriptの読み込み
+  wp_enqueue_script(
+    'main-js',
+    get_template_directory_uri() . '/js/main.js',
+    // main.jsよりも前にWordPress内部のjQueryを読み込む
+    array( 'jquery' ),
+    '1.0.5',
+    // wp_footer()の位置で出力
+    true
+  );
 }
 add_action( 'wp_enqueue_scripts', 'my_script_init' );
 
@@ -67,11 +86,11 @@ add_action( 'init', 'my_menu_init' );
 
 
 /* 固定ページ毎に設定したスラッグをclassとして<body>に追加 */
-add_filter( 'body_class', 'add_page_slug_class_name' );
 function add_page_slug_class_name( $classes ) {
   if ( is_page() ) {
     $page = get_post( get_the_ID() );
     $classes[] = $page->post_name;
   }
   return $classes;
-}
+};
+add_filter( 'body_class', 'add_page_slug_class_name' );
