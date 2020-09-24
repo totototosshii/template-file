@@ -5,11 +5,6 @@
  * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/add_theme_support
  */
 
-/* コンテンツの横幅をセット */
-if ( ! isset ($content_width ) ) {
-  $content_width = 840;
-}
-
 /* テーマのセットアップ */
 function my_theme_setup() {
   // <head>内にRSSフィードリンクを出力
@@ -34,6 +29,13 @@ function my_theme_setup() {
   add_theme_support( 'responsive-embeds' );
 }
 add_action( 'after_setup_theme', 'my_theme_setup' );
+
+
+/* コンテンツの横幅をセット */
+if (!isset($content_width)) {
+  $content_width = 840;
+}
+
 
 /* CSSとJavaScriptの読み込み */
 function my_script_init() {
@@ -71,6 +73,7 @@ function my_script_init() {
 }
 add_action( 'wp_enqueue_scripts', 'my_script_init' );
 
+
 /* メニューの設定 */
 function my_menu_init() {
 	register_nav_menus(
@@ -80,6 +83,7 @@ function my_menu_init() {
 	);
 }
 add_action( 'init', 'my_menu_init' );
+
 
 /* 固定ページ毎に設定したスラッグをclassとして<body>に追加 */
 function add_page_slug_class_name( $classes ) {
