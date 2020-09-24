@@ -13,6 +13,13 @@
   <meta property="og:description" content="">
   <meta name="twitter:card" content="summary_large_image">
   <?php wp_head(); ?>
+  <?php if( is_user_logged_in() ) : ?>
+    <style type="text/css">
+      .header {
+        margin-top: 32px;
+      }
+    </style>
+  <?php endif; ?>
 </head>
 <body <?php body_class(); ?>>
   <header class="header">
