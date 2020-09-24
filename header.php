@@ -12,7 +12,6 @@
   <meta property="og:site_name" content="">
   <meta property="og:description" content="">
   <meta name="twitter:card" content="summary_large_image">
-  <?php wp_head(); ?>
   <?php if( is_user_logged_in() ) : ?>
     <style type="text/css">
       .header {
@@ -20,6 +19,7 @@
       }
     </style>
   <?php endif; ?>
+  <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
   <header class="header">
