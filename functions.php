@@ -10,7 +10,6 @@ if ( ! isset ($content_width ) ) {
   $content_width = 840;
 }
 
-
 /* テーマのセットアップ */
 function my_theme_setup() {
   // <head>内にRSSフィードリンクを出力
@@ -35,7 +34,6 @@ function my_theme_setup() {
   add_theme_support( 'responsive-embeds' );
 }
 add_action( 'after_setup_theme', 'my_theme_setup' );
-
 
 /* CSSとJavaScriptの読み込み */
 function my_script_init() {
@@ -66,13 +64,12 @@ function my_script_init() {
     get_template_directory_uri() . '/js/main.js',
     // main.jsよりも前にWordPress内部のjQueryを読み込む
     array( 'jquery' ),
-    '1.0.5',
+    '1.0.6',
     // wp_footer()の位置で出力
     true
   );
 }
 add_action( 'wp_enqueue_scripts', 'my_script_init' );
-
 
 /* メニューの設定 */
 function my_menu_init() {
@@ -84,12 +81,11 @@ function my_menu_init() {
 }
 add_action( 'init', 'my_menu_init' );
 
-
 /* 固定ページ毎に設定したスラッグをclassとして<body>に追加 */
 function add_page_slug_class_name( $classes ) {
   if ( is_page() ) {
     $page = get_post( get_the_ID() );
-    $classes[] = $page->post_name;
+    $classes[] = $page -> post_name;
   }
   return $classes;
 };
