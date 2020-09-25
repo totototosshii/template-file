@@ -66,7 +66,7 @@
           </div><!-- /.section-contents -->
         </div><!-- /.section-content -->
         <!-- ページネーション -->
-        <?php if(function_exists("archive_pagenation")): ?>
+        <?php if(function_exists('archive_pagenation')): ?>
           <?php archive_pagenation(); ?>
         <?php endif; ?>
       </div><!-- /.section-inner -->
