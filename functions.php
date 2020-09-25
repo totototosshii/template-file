@@ -111,3 +111,52 @@ function archive_pagenation() {
     );
     echo '</nav>';
 };
+
+
+/* 管理画面にPV数を表示 */
+function add_views_columns($columns) {
+  $columns['post_views_count'] = '閲覧数';
+  $columns['thumbnail'] = 'サムネイル';
+  return $columns;
+}
+add_filter( 'manage_posts_columns', 'add_views_columns');
+
+function add_views_column($column_name, $post_id) {
+  // 閲覧数の呼び出し
+  if($column_name == 'post_views_count') {
+    $title = get_post_meta($post_id, 'post_views_count', true);
+  }
+  // サムネイルの呼び出し
+  if( $column_name == 'thumbnail') {
+    $thumb = get_the_post_thumbnail($post_id, array(100,100), 'thumbnail');
+  }
+  // ない場合はなしと表示
+  if(isset($title)) {
+    echo esc_attr($title);
+  }else if( isset($thumb) && $thumb ) {
+    echo $thumb;
+  }
+  else{
+    echo __('None');
+  }
+}
+add_action('manage_posts_custom_column', 'add_views_column', 10, 2);
+
+// 並べ替え
+function column_orderby_custom($vars) {
+  if('post_views_count' == $vars['orderby']){
+    $vars = array_merge($vars, array(
+      'meta_key' => 'post_views_count',
+      'orderby' => 'meta_value_num'
+    ));
+  }
+  return $vars;
+}
+add_filter( 'request', 'column_orderby_custom' );
+
+// 並べ替えができるように登録
+function posts_register_sortable($sortable_column) {
+  $sortable_column['post_views_count'] = 'post_views_count';
+  return $sortable_column;
+}
+add_filter( 'manage_edit-post_sortable_columns', 'posts_register_sortable' );
