@@ -94,3 +94,20 @@ function add_page_slug_class_name( $classes ) {
   return $classes;
 };
 add_filter( 'body_class', 'add_page_slug_class_name' );
+
+
+/* 記事一覧ページの前後記事ページネーション */
+function archive_pagenation() {
+  global $wp_query;
+  if ($wp_query -> max_num_pages <= 1)
+    return;
+    echo '<nav class="pagenation">';
+    echo paginate_links(array(
+      'total' => $wp_query -> max_num_pages,
+      'prev_text' => ('<'),
+      'next_text' => ('>'),
+      'type' => 'list'
+      )
+    );
+    echo '</nav>';
+};

@@ -647,40 +647,24 @@
       }
     }
     // 前後記事ページネーション
-    .pagenation{
+    .page-numbers{
       display: flex;
       justify-content: center;
-      font-size: 1.4rem;
-    }
-    .page-numbers{
-      display: block;
-      width: 27px;
-      height: 27px;
-      text-align: center;
-      border: 2px solid $color-dark;
-      margin-right: 9px;
-    }
-    .fa-chevron-left{
-      position: relative;
-      &::before{
-        display: block;
-        position: absolute;
-        top: -10px;
-        left: -3px;
+      li{
+        width: 27px;
+        height: 27px;
+        border: 2px solid $color-dark;
+        font-size: 1.4rem;
+        line-height: 23px;
+        margin-right: 9px;
       }
-    }
-    .fa-chevron-right{
-      position: relative;
-      &::before{
-        display: block;
-        position: absolute;
-        top: -10px;
-        left: -3px;
+      .next, .prev{
+        font-weight: $fw-w6;
       }
-    }
-    .current{
-      color: $color-bright;
-      background-color: $color-dark;
+      .current{
+        color: $color-bright;
+        background-color: $color-dark;
+      }
     }
   }
 

@@ -1642,48 +1642,29 @@ a:hover {
   font-size: 1.8rem;
 }
 
-.archive .section:first-of-type .pagenation {
+.archive .section:first-of-type .page-numbers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.4rem;
 }
 
-.archive .section:first-of-type .page-numbers {
-  display: block;
+.archive .section:first-of-type .page-numbers li {
   width: 27px;
   height: 27px;
-  text-align: center;
   border: 2px solid #333;
+  font-size: 1.4rem;
+  line-height: 23px;
   margin-right: 9px;
 }
 
-.archive .section:first-of-type .fa-chevron-left {
-  position: relative;
+.archive .section:first-of-type .page-numbers .next, .archive .section:first-of-type .page-numbers .prev {
+  font-weight: 600;
 }
 
-.archive .section:first-of-type .fa-chevron-left::before {
-  display: block;
-  position: absolute;
-  top: -10px;
-  left: -3px;
-}
-
-.archive .section:first-of-type .fa-chevron-right {
-  position: relative;
-}
-
-.archive .section:first-of-type .fa-chevron-right::before {
-  display: block;
-  position: absolute;
-  top: -10px;
-  left: -3px;
-}
-
-.archive .section:first-of-type .current {
+.archive .section:first-of-type .page-numbers .current {
   color: #FFF;
   background-color: #333;
 }
