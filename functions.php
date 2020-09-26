@@ -113,7 +113,7 @@ function archive_pagenation() {
 };
 
 
-/* 管理画面にPV数を表示 */
+/* 管理画面に閲覧数を表示 */
 function add_views_columns($columns) {
   $columns['post_views_count'] = '閲覧数';
   $columns['thumbnail'] = 'サムネイル';
