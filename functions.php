@@ -114,6 +114,37 @@ function archive_pagenation() {
 
 
 /* 管理画面に閲覧数を表示 */
+//アクセス数を保存
+function set_post_views($postID) {
+  $count_key = 'post_views_count';
+  $count = get_post_meta($postID, $count_key, true);
+  if($count==''){
+      $count = 0;
+      delete_post_meta($postID, $count_key);
+      add_post_meta($postID, $count_key, '0');
+  }else{
+    $count++;
+    update_post_meta($postID, $count_key, $count);
+  }
+}
+
+//クローラーのアクセス判別
+function is_bot() {
+  $ua = $_SERVER['HTTP_USER_AGENT'];
+  $bot = array(
+    "googlebot",
+    "msnbot",
+    "yahoo"
+  );
+  foreach( $bot as $bot ) {
+    if (stripos( $ua, $bot ) !== false){
+      return true;
+    }
+  }
+  return false;
+}
+
+// 項目を増やす
 function add_views_columns($columns) {
   $columns['post_views_count'] = '閲覧数';
   $columns['thumbnail'] = 'サムネイル';

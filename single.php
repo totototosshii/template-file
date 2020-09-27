@@ -1,3 +1,5 @@
+<!-- ログインユーザーとクローラーの巡回は閲覧数にカウントしない -->
+<?php if( !is_user_logged_in() && !is_bot() ) { set_post_views( get_the_ID() ); } ?>
 <?php get_header(); ?>
 
   <!-- ファーストビュー -->
