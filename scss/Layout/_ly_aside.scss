@@ -1,0 +1,7 @@
+// --------------------------------
+//        コンテンツ幅の指定
+// --------------------------------
+.header_inner, .footer_inner, .inner{
+  max-width: $layout-width-inner;
+  margin: 0 auto;
+}

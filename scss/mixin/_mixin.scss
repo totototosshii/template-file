@@ -1,0 +1,24 @@
+// font-size
+@mixin fz($size: 16) {
+  font-size: ($size / 10) + rem;
+}
+// 参考→https://jajaaan.co.jp/css/font-size-rem/
+// remは可変となっても大丈夫な箇所にのみ指定し、それ以外はpx
+// 例）↓
+//  p {
+//     @include fz(18);
+//  }
+
+// 上下左右中央寄せ
+@mixin cc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 子要素をインナー幅からはみ出して画面一杯
+@mixin go {
+	width: 100vw;
+  margin: 0 calc(50% - 50vw);
+}
