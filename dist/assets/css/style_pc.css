@@ -25,6 +25,13 @@ a:hover {
   transition: all .5s;
 }
 
+/* floatによる回り込みを防ぐ */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .ly_header_inner {
   max-width: 1180px;
   margin: 0 auto;
