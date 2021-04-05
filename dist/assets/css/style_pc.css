@@ -25,13 +25,21 @@ a:hover {
   transition: all .5s;
 }
 
+/* floatによる回り込みを防ぐ */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .ly_header_inner {
   max-width: 1180px;
   margin: 0 auto;
 }
 
 .ly_section_inner {
-  max-width: 1180px;
+  max-width: 1230px;
+  padding: 100px 15px;
   margin: 0 auto;
 }
 
