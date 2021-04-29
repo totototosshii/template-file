@@ -1,0 +1,48 @@
+// --------------------
+//      変数を定義
+// --------------------
+
+// コンテンツ幅
+$layout-width-inner: 1180px;
+
+// カラー
+$color-text: #333;
+$color-main: #FAFAFA;
+$color-active: #3EA8FF;
+
+// フォントファミリー
+$ff-gothic: 'Noto Sans JP', 游ゴシック, 'Yu Gothic', 游ゴシック体, YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Meiryo UI', メイリオ, Meiryo, sans-serif;
+$ff-mincho: 'Noto Serif JP', 游明朝, 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', HGS明朝E, メイリオ, Meiryo, serif;
+$ff-base: $ff-gothic;
+$fz-base: 1.6rem;
+$lh-base: 1;
+
+// 重なり順
+$layer: (
+  modal: 100,
+  drawer: 40,
+  sp-menu: 35,
+  floating: 30,// トップへ戻る
+  header: 20,
+  default: 1
+);
+// 例）
+// .drawer {
+//   z-index: map-get($layer, "drawer");
+// }
+
+// デザインカンプの数値をそのまま入力
+// 括弧内は左から、フォントサイズ、行送り、フォントウェイト、トラッキングの順
+// フォントサイズには引数を指定
+@mixin f_around($pixels, $height: false, $weight: false, $spacing: false) {
+  font-size: $pixels * 1rem;
+  @if $weight{
+    font-weight: $weight;
+  }
+  @if $height{
+    line-height: $height / $pixels;
+  }
+  @if $spacing{
+    letter-spacing: ($spacing / 1000) * 1em;
+  }
+}

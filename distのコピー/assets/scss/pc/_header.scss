@@ -1,0 +1,39 @@
+//--------------------------------------------------------
+// ※Block要素にレイアウトに関わるスタイリングをする場合は下記を参照。
+//--------------------------------------------------------
+// 例１)
+// 親要素を利用した子(孫)セレクターとしてスタイリングする。
+// <div class="bl_3colCardUnit">
+//   <div class="bl_card"></div>
+//   <div class="bl_card"></div>
+//   <div class="bl_card"></div>
+// </div>
+//              ↓
+// .bl_3colCardUnit > .bl_card{
+//   width:300px;
+//   margin:0 20px;
+// }
+//
+//
+// 例２)
+// 親要素のElementとしてクラスを付与。
+// <div class="bl_3colCardUnit">
+//   <div class="bl_3colCardUnit_item bl_card"></div>
+//   <div class="bl_3colCardUnit_item bl_card"></div>
+//   <div class="bl_3colCardUnit_item bl_card"></div>
+// </div>
+//              ↓
+// .bl_3colcardUnit_item{
+//   width: 300px;
+//   margin: 0 20px;
+// }
+//--------------------------------------------------------
+
+
+// --------------------------------
+//             ヘッダー
+// --------------------------------
+.ly_header_inner{
+  max-width: $layout-width-inner;
+  margin: 0 auto;
+}
